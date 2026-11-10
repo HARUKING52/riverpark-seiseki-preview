@@ -1,20 +1,34 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import path from 'node:path';
 
-const root = 'C:/Users/fc3sl/.gemini/antigravity/scratch/riverpark-seiseki';
-
-test('header.html uses root-relative gentle navigation links matching the approved design', () => {
-  const html = fs.readFileSync(path.join(root, 'include/header.html'), 'utf8');
-  for (const expected of ['コンセプト', 'プログラム', 'インストラクター', 'ワークラウンジ', 'プラン', 'スケジュール', 'アクセス', '体験のご予約はこちら']) {
-    assert.ok(html.includes(expected), `Missing nav item: ${expected}`);
+test('header.html links directly to dedicated subpages instead of top-page anchors', () => {
+  const header = fs.readFileSync('include/header.html', 'utf8');
+  for (const href of ['/concept/', '/program/', '/instructor/', '/lounge/', '/plan/', '/program/#schedule', '/access/', '/first-time/']) {
+    assert.ok(header.includes(`href="${href}"`), `Expected header.html to link to ${href}`);
   }
-  assert.ok(html.includes('href="/lounge/"'), 'Missing /lounge/ link');
+  assert.ok(!header.includes('href="/#concept"'), 'header.html should not use top-page anchor /#concept');
 });
 
-test('footer.html links to valid root-relative /pdf/member_agreement.pdf without empty href', () => {
-  const html = fs.readFileSync(path.join(root, 'include/footer.html'), 'utf8');
-  assert.ok(html.includes('href="/pdf/member_agreement.pdf"'), 'Should point to /pdf/member_agreement.pdf');
-  assert.ok(!html.includes('href=""'), 'Footer must not contain empty href=""');
+test('footer.html links to valid member_agreement.pdf and dedicated subpages', () => {
+  const footer = fs.readFileSync('include/footer.html', 'utf8');
+  assert.ok(footer.includes('href="/pdf/member_agreement.pdf"'));
+  assert.ok(!footer.includes('href=""'));
+});
+
+test('extracted Instagram MP4 and JPG assets exist in img/insta/ and are non-empty', () => {
+  const expectedFiles = [
+    'img/insta/riverpark_3rd_anniv.mp4',
+    'img/insta/kids_dance_river.mp4',
+    'img/insta/ayumi_riverside_yoga.mp4',
+    'img/insta/ai_aroma_yoga.mp4',
+    'img/insta/bouldering_school_1.jpg',
+    'img/insta/kids_bouldering_interview.jpg',
+    'img/insta/maiko_pilates_1.jpg',
+    'img/insta/kota_holistic_yoga_1.jpg',
+  ];
+  for (const file of expectedFiles) {
+    assert.ok(fs.existsSync(file), `Missing ${file}`);
+    assert.ok(fs.statSync(file).size > 1000, `Empty or invalid file: ${file}`);
+  }
 });

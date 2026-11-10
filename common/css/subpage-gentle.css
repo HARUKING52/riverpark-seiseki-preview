@@ -247,3 +247,399 @@
 		height: 220px;
 	}
 }
+
+
+/* ==========================================================
+   RIVER PARK Shared 3-Column Grid, Cards, Modals & Components
+========================================================== */
+
+/* --- 3-Column Photo Grid & Borderless Cards (.rp-grid-3, .rp-card-3) --- */
+.rp-grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 36px 28px;
+}
+
+.rp-card-3 {
+	display: flex;
+	flex-direction: column;
+	background: transparent;
+	text-decoration: none;
+	color: inherit;
+}
+
+.rp-card-3__media {
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	margin-bottom: 12px;
+	background: #f0f0f0;
+	position: relative;
+	border-radius: 2px;
+}
+
+.rp-card-3__media img,
+.rp-card-3__media video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.rp-card-3:hover .rp-card-3__media img,
+.rp-card-3:hover .rp-card-3__media video {
+	transform: scale(1.03);
+}
+
+.rp-card-3__meta {
+	color: #72bcd9;
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	font-weight: 600;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+}
+
+.rp-card-3__title {
+	font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #222222;
+	margin: 4px 0 8px;
+	line-height: 1.5;
+}
+
+.rp-card-3__desc {
+	font-size: 13px;
+	color: #555555;
+	line-height: 1.8;
+	margin-bottom: 10px;
+	flex-grow: 1;
+}
+
+.rp-card-3__more {
+	font-size: 12px;
+	color: #72bcd9;
+	letter-spacing: 0.08em;
+	font-weight: 500;
+	display: inline-block;
+	text-decoration: none;
+	transition: opacity 0.2s;
+}
+
+.rp-card-3__more:hover {
+	opacity: 0.75;
+}
+
+@media screen and (max-width: 960px) {
+	.rp-grid-3 {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 28px 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.rp-grid-3 {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+}
+
+/* --- Program Detail Rich Modal (.rp-modal-detail) --- */
+.rp-modal-detail {
+	background: #ffffff;
+	padding: 32px;
+	max-width: 820px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	color: #222222;
+}
+
+.rp-modal-top {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 28px;
+	margin-bottom: 24px;
+	align-items: start;
+}
+
+.rp-modal-media {
+	position: relative;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.rp-modal-media video,
+.rp-modal-media img {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	display: block;
+	border-radius: 4px;
+}
+
+.rp-modal-insta-link {
+	margin-top: 8px;
+	display: inline-block;
+	font-size: 12px;
+	color: #72bcd9;
+	text-decoration: none;
+	border-bottom: 1px solid #72bcd9;
+	padding-bottom: 1px;
+}
+
+.rp-modal-insta-link:hover {
+	opacity: 0.75;
+}
+
+.rp-modal-info .rp-modal-cat {
+	font-size: 11px;
+	color: #72bcd9;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+}
+
+.rp-modal-info .rp-modal-title {
+	font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
+	font-size: 20px;
+	font-weight: 600;
+	color: #222222;
+	line-height: 1.5;
+	margin-bottom: 8px;
+}
+
+.rp-modal-info .rp-modal-intensity {
+	font-size: 12px;
+	color: #72bcd9;
+	margin-bottom: 16px;
+	font-weight: 500;
+}
+
+.rp-modal-section-block {
+	margin-bottom: 14px;
+}
+
+.rp-modal-label {
+	font-size: 11px;
+	color: #72bcd9;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+
+.rp-modal-desc {
+	font-size: 13px;
+	color: #444444;
+	line-height: 1.85;
+}
+
+/* 2-column #fafafa effects box */
+.rp-modal-effects {
+	background: #fafafa;
+	border-radius: 4px;
+	padding: 22px 24px;
+	margin-bottom: 24px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+	border-left: 3px solid #72bcd9;
+}
+
+.rp-modal-effect-col h4 {
+	font-size: 12px;
+	font-weight: 600;
+	color: #72bcd9;
+	letter-spacing: 0.08em;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+.rp-modal-effect-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 12.5px;
+	color: #444444;
+	line-height: 1.85;
+}
+
+.rp-modal-effect-list li {
+	position: relative;
+	padding-left: 14px;
+	margin-bottom: 4px;
+}
+
+.rp-modal-effect-list li::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: #72bcd9;
+	font-weight: bold;
+}
+
+.rp-modal-actions {
+	text-align: center;
+	margin-top: 24px;
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.rp-modal-actions .rp-reserve-btn {
+	display: inline-block;
+	background: #72bcd9;
+	color: #ffffff;
+	border-radius: 30px;
+	padding: 12px 36px;
+	font-size: 13.5px;
+	font-weight: 500;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	transition: background 0.2s;
+}
+
+.rp-modal-actions .rp-reserve-btn:hover {
+	background: #5ba3be;
+}
+
+@media screen and (max-width: 768px) {
+	.rp-modal-detail {
+		padding: 20px 16px;
+	}
+	.rp-modal-top {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	.rp-modal-effects {
+		grid-template-columns: 1fr;
+		gap: 16px;
+		padding: 16px;
+	}
+}
+
+/* --- Official Instagram Embed Grid (.rp-insta-embed-grid) --- */
+.rp-insta-embed-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 28px;
+}
+
+.rp-insta-card {
+	background: #ffffff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #f0f0f0;
+}
+
+.rp-insta-card .rp-insta-iframe {
+	width: 100%;
+	border: none;
+	overflow: hidden;
+	min-height: 480px;
+	max-height: 540px;
+	background: #ffffff;
+}
+
+@media screen and (max-width: 960px) {
+	.rp-insta-embed-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.rp-insta-embed-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+
+/* --- Time-of-day Story Grid (.rp-story-grid) --- */
+.rp-story-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+
+.rp-story-card {
+	background: #fafafa;
+	padding: 28px 22px;
+	border-radius: 4px;
+	border-top: 2px solid #72bcd9;
+	display: flex;
+	flex-direction: column;
+}
+
+.rp-story-card .rp-story-time {
+	font-size: 13px;
+	font-weight: 600;
+	color: #72bcd9;
+	letter-spacing: 0.08em;
+	margin-bottom: 8px;
+}
+
+.rp-story-card .rp-story-title {
+	font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
+	font-size: 16px;
+	font-weight: 600;
+	color: #222222;
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+
+.rp-story-card .rp-story-desc {
+	font-size: 12.5px;
+	color: #555555;
+	line-height: 1.85;
+}
+
+@media screen and (max-width: 960px) {
+	.rp-story-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.rp-story-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
+
+/* --- Instructor Category Filter Tabs (.rp-filter-tabs) --- */
+.rp-filter-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	margin: 0 auto 36px;
+	list-style: none;
+	padding: 0;
+}
+
+.rp-filter-tab {
+	border: 1px solid #72bcd9;
+	background: #ffffff;
+	color: #72bcd9;
+	border-radius: 20px;
+	padding: 8px 22px;
+	font-size: 13px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	outline: none;
+}
+
+.rp-filter-tab:hover,
+.rp-filter-tab.is-active {
+	background: #72bcd9;
+	color: #ffffff;
+}
