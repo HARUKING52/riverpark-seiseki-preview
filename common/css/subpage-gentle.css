@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* ==========================================================
+   Gentle Subpage Styles (Matching riverpark_top_gentle_fullpage.jpg)
+========================================================== */
+
+.gentle_subpage_hero {
+	padding: 80px 0 50px;
+	background: #ffffff;
+	width: 930px;
+	margin: 0 auto;
+}
+
+.gentle_subpage_hero h1 {
+	color: #72BCD9;
+	font-size: 28px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	line-height: 1.6;
+	margin-bottom: 28px;
+}
+
+.gentle_subpage_hero h1 span {
+	display: block;
+	color: #333333;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 6px;
+}
+
+.gentle_subpage_hero p.lead {
+	font-size: 15.5px;
+	color: #221815;
+	line-height: 2.2em;
+	font-weight: 500;
+}
+
+.gentle_section {
+	padding: 75px 0;
+	background: #ffffff;
+}
+
+.gentle_section.bg_soft {
+	background: #fafafa;
+}
+
+.gentle_section .inner {
+	width: 930px;
+	margin: 0 auto;
+}
+
+.gentle_section h2 {
+	color: #72BCD9;
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	line-height: 1.6;
+	margin-bottom: 40px;
+}
+
+.gentle_section h2 span {
+	display: block;
+	color: #333333;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 4px;
+}
+
+/* Beginner Program Effect Guide Cards */
+.effect_guide_wrap {
+	width: 930px;
+	margin: 0 auto 60px;
+	padding: 55px 0 20px;
+}
+
+.effect_guide_wrap .guide_heading {
+	color: #72BCD9;
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	line-height: 1.6;
+	margin-bottom: 32px;
+}
+
+.effect_guide_wrap .guide_heading span {
+	display: block;
+	color: #333333;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 4px;
+}
+
+.effect_guide_grid {
+	display: flex;
+	justify-content: space-between;
+	gap: 28px;
+	flex-wrap: wrap;
+}
+
+.effect_guide_card {
+	background: #fafafa;
+	padding: 36px 32px;
+	width: calc(33.333% - 19px);
+	box-sizing: border-box;
+	border-top: 2px solid #72bcd9;
+}
+
+.effect_guide_card h3 {
+	font-size: 17px;
+	font-weight: 600;
+	color: #221815;
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+
+.effect_guide_card .effect_sub {
+	font-size: 12.5px;
+	color: #72bcd9;
+	font-weight: 600;
+	margin-bottom: 18px;
+	display: block;
+}
+
+.effect_guide_card p {
+	font-size: 13.5px;
+	color: #333333;
+	line-height: 2.0em;
+	margin-bottom: 18px;
+}
+
+.effect_guide_card .effect_points {
+	font-size: 12.5px;
+	color: #424242;
+	line-height: 1.9em;
+	padding-top: 14px;
+	border-top: 1px solid #e8e6e6;
+}
+
+.effect_insta_note {
+	margin-top: 28px;
+	text-align: right;
+	font-size: 13px;
+}
+
+.effect_insta_note a {
+	color: #72bcd9;
+	border-bottom: 1px solid #72bcd9;
+	padding-bottom: 2px;
+	font-weight: 500;
+}
+
+/* Editorial 2-column photo + text blocks for subpages */
+.editorial_pair {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 65px;
+	gap: 48px;
+}
+
+.editorial_pair:last-child {
+	margin-bottom: 0;
+}
+
+.editorial_pair .photo_col {
+	width: 48%;
+}
+
+.editorial_pair .photo_col img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.editorial_pair .text_col {
+	width: 48%;
+}
+
+.editorial_pair .text_col h3 {
+	font-size: 19px;
+	font-weight: 600;
+	color: #221815;
+	margin-bottom: 18px;
+	line-height: 1.6;
+}
+
+.editorial_pair .text_col p {
+	font-size: 14px;
+	color: #333333;
+	line-height: 2.1em;
+	margin-bottom: 20px;
+}
+
+.gentle_pill_btn {
+	display: inline-block;
+	border: 2px solid #72bcd9;
+	border-radius: 30px;
+	padding: 10px 32px;
+	color: #72bcd9;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.gentle_pill_btn:hover {
+	background: #72bcd9;
+	color: #ffffff;
+	opacity: 1;
+}
+
+.gentle_faq_list dl {
+	padding: 28px 0;
+	border-bottom: 1px solid #edebeb;
+}
+
+.gentle_faq_list dt {
+	font-size: 15.5px;
+	font-weight: 600;
+	color: #221815;
+	margin-bottom: 12px;
+	line-height: 1.6;
+}
+
+.gentle_faq_list dd {
+	font-size: 14px;
+	color: #424242;
+	line-height: 2.0em;
+}
+
+@media screen and (max-width:768px){
+	.gentle_subpage_hero,
+	.gentle_section .inner,
+	.effect_guide_wrap {
+		width: 88%;
+	}
+	.effect_guide_card {
+		width: 100%;
+	}
+	.editorial_pair {
+		flex-direction: column;
+		gap: 24px;
+	}
+	.editorial_pair .photo_col,
+	.editorial_pair .text_col {
+		width: 100%;
+	}
+	.editorial_pair .photo_col img {
+		height: 220px;
+	}
+}
