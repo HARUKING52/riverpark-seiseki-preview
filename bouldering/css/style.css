@@ -1,0 +1,393 @@
+@charset "UTF-8";
+
+
+
+
+/* layout
+---------------------------------------------------------- */
+body {
+	background:#ffffff;
+}
+
+
+
+/* content
+---------------------------------------------------------- */
+
+.content {
+	padding: 200px 0 0;
+	color: #000000;
+}
+
+.content .title_area {
+	margin-bottom: 130px;
+}
+.content .title_area h1 {
+	font-size: 16px;
+	text-align: center;
+	line-height: 2.2em;
+	margin-bottom: 20px;
+}
+
+.content .title_area h1 span {
+	font-size: 60px;
+	font-weight: 700;
+}
+
+.title_area p {
+	font-size: 16px;
+	text-align: center;
+}
+
+@media screen and (max-width:768px){
+	
+	.content {
+		padding: 120px 0 0;
+		color: #000000;
+	}
+
+	.content .title_area {
+		margin-bottom: 100px;
+	}
+	.content .title_area h1 {
+		font-size: 12px;
+		text-align: center;
+		line-height: 2.0em;
+		margin-bottom: 20px;
+	}
+
+	.content .title_area h1 span {
+		font-size: 30px;
+		font-weight: 700;
+	}
+
+	.title_area p {
+		font-size: 12px;
+		text-align: center;
+	}
+	
+}
+
+
+.program_menu { padding: 50px 0 150px;}
+.bg_gray {
+	background: #fafafa;
+}
+
+
+.program_menu h2 {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.program_menu ul {
+    display: grid;
+    /* 1つのアイテムの幅を276pxとして、入るだけ並べる（自動で折り返し） */
+    grid-template-columns: repeat(auto-fit, 276px);
+    /* 少ないときは全体を中央に寄せる */
+    justify-content: center;
+    /* 要素と要素の間の隙間（お好みの数値に調整してください） */
+    gap: 30px; 
+    
+    max-width: 900px; /* 固いwidthではなく最大幅にするのがおすすめ */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+/* 以前の ::after のような面倒なハックは不要なので削除できます */
+
+.program_menu ul li {
+    width: 100%; /* Gridの列幅（276px）に自動で合わせる */
+    text-align: center;
+    margin-bottom: 0; /* Gridの gap が縦横両方に効くため不要になります */
+}
+
+
+.program_menu ul li a {
+	box-sizing: border-box;
+	width: 276px;
+  display: block;
+  padding: 14px 5px;
+  background-color: #72bcd9;/* ボタンの背景色 */
+  color: #ffffff;            /* 文字色 */
+  text-decoration: none;     /* 下線を消す */
+  border-radius: 30px;        /* 角丸 */
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+	border: 3px solid #72bcd9;
+	font-size: 13px;
+}
+
+/* 文字の最後に大なりを追加 */
+.program_menu ul li a::after {
+  content: "";
+  display: inline-block;
+  width: 8px;           /* 矢印の幅 */
+  height: 12px;          /* 矢印の高さ */
+  margin-left: 8px;     /* 文字との間隔 */
+  /* SVGの矢印アイコン（データURI） */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+/* ホバー時の装飾（任意） */
+.program_menu ul li a:hover {
+	box-sizing: border-box;
+  background-color: #ffffff;
+	color: #72bcd9;
+}
+
+/* ホバーした時に矢印を少し右に動かすエフェクト */
+.program_menu ul li a:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%2372bcd9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+}
+
+
+
+@media screen and (max-width:768px){
+	
+	
+	.program_menu { width: 100%; margin: 0 auto; padding: 30px 0;}
+	.bg_gray {
+		background: #fafafa;
+	}
+
+
+	.program_menu h2 {
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+
+
+	.program_menu ul {
+        display: block; 
+        width: 76%;
+        max-width: none; 
+        margin: 0 auto;
+        padding: 0; 
+        list-style: none;
+    }
+
+    .program_menu ul::after {
+        content: none;
+        display: none;
+        width: auto;
+        height: 0;
+    }
+
+    .program_menu ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+
+
+	.program_menu ul li a {
+		box-sizing: border-box;
+		width: 100%;
+	  display: block;
+	  padding: 14px 5px;
+	  background-color: #72bcd9;/* ボタンの背景色 */
+	  color: #ffffff;            /* 文字色 */
+	  text-decoration: none;     /* 下線を消す */
+	  border-radius: 30px;        /* 角丸 */
+	  font-weight: 600;
+		border: 3px solid #72bcd9;
+		font-size: 14px;
+	}
+
+	/* 文字の最後に大なりを追加 */
+	.program_menu ul li a::after {
+	  content: "";
+	  display: inline-block;
+	  width: 8px;           /* 矢印の幅 */
+	  height: 12px;          /* 矢印の高さ */
+	  margin-left: 8px;     /* 文字との間隔 */
+	  /* SVGの矢印アイコン（データURI） */
+	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  transition: transform 0.3s ease;
+	}
+
+	/* ホバー時の装飾（任意） */
+	.program_menu ul li a:hover {
+		box-sizing: border-box;
+	  background-color: #ffffff;
+		color: #72bcd9;
+	}
+
+	/* ホバーした時に矢印を少し右に動かすエフェクト */
+	.program_menu ul li a:hover::after {
+	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%2372bcd9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+	}
+
+}
+
+
+
+/* instructor_area
+---------------------------------------------------- */
+
+.instructor_area {
+	padding: 50px 0 80px;
+}
+
+
+.instructor_area h2 {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.instructor_area .inst_box {
+    max-width: 882px; /* 固いwidthではなく最大幅にする */
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    /* 要素の数に合わせて自動で列数を調整する設定 */
+    grid-template-columns: repeat(auto-fit, 195px);
+    /* 少ないときに全体を中央に寄せるマジックワード */
+    justify-content: center;
+    gap: 34px;
+}
+
+.instructor_area .inst_box dl {
+    box-sizing: border-box;
+    border: 1px solid #e8e6e6;
+    background: #ffffff;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+
+.instructor_area .inst_box dl dt {
+	margin-bottom: 10px;
+}
+
+.instructor_area .inst_box dl dt img {
+	width: 100%;
+}
+
+.instructor_area .inst_box dl dd {
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.instructor_area .inst_box dl dd.btn {
+	
+}
+
+
+.instructor_area .inst_box dl dd.btn a {
+	box-sizing: border-box;
+	width: 160px;
+	margin: 20px auto 0;
+	display: block;
+	padding: 4px 5px;
+	background-color: #72bcd9;/* ボタンの背景色 */
+	color: #ffffff;            /* 文字色 */
+	text-decoration: none;     /* 下線を消す */
+	border-radius: 30px;        /* 角丸 */
+	font-weight: 600;
+	border: 3px solid #72bcd9;
+	font-size: 15px;
+}
+/* ホバー時の装飾（任意） */
+.instructor_area .inst_box dl dd.btn a:hover {
+	box-sizing: border-box;
+  background-color: #ffffff;
+	color: #72bcd9;
+}
+
+
+
+
+@media screen and (max-width:768px){
+	
+	
+	.instructor_area { width: 100%; margin: 0 auto; padding: 40px 0;}
+
+
+	.instructor_area h2 {
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	
+	
+
+	.instructor_area .inst_box {
+        width: 88%;
+        max-width: none;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 横2列 */
+        gap: 20px; /* パーセントではなくpx指定にすると安定します */
+        align-items: start; /* ★重要：勝手に高さが引き伸ばされるのを防ぐ */
+    }
+
+    .instructor_area .inst_box dl {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #e8e6e6;
+        background: #ffffff;
+        text-align: center;
+        padding-bottom: 20px;
+        margin: 0; /* 余計なマージンをリセット */
+    }
+
+	.instructor_area .inst_box dl dt {
+		margin-bottom: 10px;
+	}
+
+	.instructor_area .inst_box dl dt img {
+		width: 100%;
+	}
+
+	.instructor_area .inst_box dl dd {
+		font-size: 17px;
+		font-weight: 400;
+	}
+
+	.instructor_area .inst_box dl dd.btn {
+
+	}
+
+
+	.instructor_area .inst_box dl dd.btn a {
+		box-sizing: border-box;
+		width: 88%;
+		margin: 10px auto 0;
+		display: block;
+		padding: 4px 5px;
+		background-color: #72bcd9;/* ボタンの背景色 */
+		color: #ffffff;            /* 文字色 */
+		text-decoration: none;     /* 下線を消す */
+		border-radius: 30px;        /* 角丸 */
+		font-weight: 600;
+		border: 3px solid #72bcd9;
+		font-size: 15px;
+	}
+	/* ホバー時の装飾（任意） */
+	.instructor_area .inst_box dl dd.btn a:hover {
+		box-sizing: border-box;
+	  background-color: #ffffff;
+		color: #72bcd9;
+	}
+
+
+}

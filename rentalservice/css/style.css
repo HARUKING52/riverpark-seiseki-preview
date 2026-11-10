@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+
+
+
+/* layout
+---------------------------------------------------------- */
+body {
+	background:#ffffff;
+}
+
+
+
+/* content
+---------------------------------------------------------- */
+
+.content {
+	padding: 100px 0;
+	color: #000000;
+}
+
+.content .content_box {
+	border: 1px solid #eeecec;
+	width: 940px;
+	box-sizing: border-box;
+	padding: 70px 100px;
+	margin: 0 auto;
+}
+
+
+.content .content_box h1 {
+	font-size: 28px;
+	margin-bottom: 30px;
+	line-height: 1.5em;
+}
+
+.content .content_box img {
+	width: 100%;
+}
+
+.content .content_box .main_img {
+	margin-bottom: 30px;
+}
+
+.content .content_box .main_area {
+	border-bottom: 1px dashed #000000;
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+}
+
+.content .content_box .main_area p {
+	font-size: 16px;
+	line-height: 1.4em;
+}
+
+
+.content .content_box h2 {
+	font-size: 24px;
+	text-align: center;
+	color: #3d9be9;
+	margin-bottom: 30px;
+}
+
+
+.equipment {
+	border-bottom: 1px dashed #000000;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	
+}
+
+.content .content_box .equipment h2 {
+	margin-bottom: 0;
+}
+
+.flow {
+	margin-bottom: 40px;
+}
+
+.price {
+	margin-bottom: 40px;
+}
+
+.price p{
+	color: #f71d00;
+	font-size: 15px;
+	line-height: 1.4em;
+	margin-bottom: 30px;
+}
+
+.terms {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+
+.terms dl {
+	width: 48%;
+}
+
+.terms dl dt {
+	font-size: 20px;
+	text-align: left;
+	color: #3d9be9;
+	margin-bottom: 10px;
+}
+
+
+.terms dl dd { text-align: center;}
+.terms dl dd a {
+	box-sizing: border-box;
+	width: 100%;
+  display: block;
+  padding: 14px 5px;
+  background-color: #72bcd9;/* ボタンの背景色 */
+  color: #ffffff;            /* 文字色 */
+  text-decoration: none;     /* 下線を消す */
+  border-radius: 30px;        /* 角丸 */
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+	border: 3px solid #72bcd9;
+	font-size: 15px;
+}
+
+/* 文字の最後に大なりを追加 */
+.terms dl dd a::after {
+  content: "";
+  display: inline-block;
+  width: 8px;           /* 矢印の幅 */
+  height: 12px;          /* 矢印の高さ */
+  margin-left: 8px;     /* 文字との間隔 */
+  /* SVGの矢印アイコン（データURI） */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+/* ホバー時の装飾（任意） */
+.terms dl dd a:hover {
+	box-sizing: border-box;
+  background-color: #ffffff;
+	color: #72bcd9;
+}
+
+/* ホバーした時に矢印を少し右に動かすエフェクト */
+.terms dl dd a:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%2372bcd9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+}
+
+
+.contact {
+	margin-bottom: 60px;
+}
+
+.contact div {
+	margin-bottom: 20px;
+}
+
+.access p {
+	font-size: 15px;
+	text-align: center;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+}
+
+.access .map iframe {
+	width: 100%;
+	height: 280px;
+}
+
+@media screen and (max-width:768px){
+	
+	.content {
+		padding: 70px 0;
+		color: #000000;
+	}
+	
+	.content .content_box {
+		border:none;
+		width: 88%;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+
+	.content .content_box h1 {
+		font-size: 20px;
+		margin-bottom: 30px;
+		line-height: 1.5em;
+	}
+
+	.content .content_box img {
+		width: 100%;
+	}
+
+	.content .content_box .main_img {
+		margin-bottom: 30px;
+	}
+	
+	.content .content_box .main_area {
+		border-bottom: 1px dashed #000000;
+		margin-bottom: 40px;
+		padding-bottom: 30px;
+	}
+
+	.content .content_box .main_area p {
+		font-size: 16px;
+		line-height: 1.4em;
+	}
+
+
+	.content .content_box h2 {
+		font-size: 20px;
+		text-align: center;
+		color: #3d9be9;
+		margin-bottom: 30px;
+	}
+
+
+	.equipment {
+		border-bottom: 1px dashed #000000;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+
+	}
+
+	.content .content_box .equipment h2 {
+		margin-bottom: 0;
+	}
+
+	.flow {
+		margin-bottom: 40px;
+	}
+
+	.price {
+		margin-bottom: 40px;
+	}
+
+	.price p{
+		color: #f71d00;
+		font-size: 15px;
+		line-height: 1.4em;
+		margin-bottom: 30px;
+	}
+
+	.terms {
+		display: block;
+		justify-content: space-between;
+		margin-bottom: 60px;
+	}
+
+	.terms dl {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.terms dl dt {
+		font-size: 18px;
+		text-align: center;
+		color: #3d9be9;
+		margin-bottom: 10px;
+	}
+
+
+	.terms dl dd { text-align: center;}
+
+	.terms dl dd a {
+		box-sizing: border-box;
+		width: 100%;
+	  display: block;
+	  padding: 12px 5px;
+	  background-color: #72bcd9;/* ボタンの背景色 */
+	  color: #ffffff;            /* 文字色 */
+	  text-decoration: none;     /* 下線を消す */
+	  border-radius: 30px;        /* 角丸 */
+	  font-weight: 600;
+		border: 3px solid #72bcd9;
+		font-size: 14px;
+	}
+
+	/* 文字の最後に大なりを追加 */
+	.terms dl dd a::after {
+	  content: "";
+	  display: inline-block;
+	  width: 8px;           /* 矢印の幅 */
+	  height: 12px;          /* 矢印の高さ */
+	  margin-left: 8px;     /* 文字との間隔 */
+	  /* SVGの矢印アイコン（データURI） */
+	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  transition: transform 0.3s ease;
+	}
+
+	/* ホバー時の装飾（任意） */
+	.terms dl dd a:hover {
+		box-sizing: border-box;
+	  background-color: #ffffff;
+		color: #72bcd9;
+	}
+
+	/* ホバーした時に矢印を少し右に動かすエフェクト */
+	.terms dl dd a:hover::after {
+	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='none' stroke='%2372bcd9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1l6 5-6 5'/%3E%3C/svg%3E");
+	}
+
+	.contact {
+		margin-bottom: 60px;
+	}
+
+	.contact div {
+		margin-bottom: 20px;
+	}
+
+	.access p {
+		font-size: 15px;
+		text-align: center;
+		line-height: 1.4em;
+		margin-bottom: 20px;
+	}
+
+	.access .map iframe {
+		width: 100%;
+		height: 280px;
+	}
+
+
+}

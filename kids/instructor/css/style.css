@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+
+
+
+/* layout
+---------------------------------------------------------- */
+body {
+	background:#ffffff;
+}
+
+
+
+/* content
+---------------------------------------------------------- */
+
+.content {
+	padding: 120px 0 0;
+	color: #000000;
+}
+
+.content .inner {
+	width: 788px;
+	margin: 0 auto;
+}
+
+.content .inner .page_back {
+	margin-bottom: 60px;
+	font-size: 15px;
+	letter-spacing: 0.08em;
+}
+.content .inner .page_back a{
+	font-weight: 300;
+}
+
+
+.title_area {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.title_area h1 { 
+	font-size: 40px;
+	margin-bottom: 60px;
+	font-weight: 300;
+}
+
+.title_area p {
+	font-size: 20px;
+	margin-bottom: 120px;
+	font-weight: 300;
+}
+
+.title_area .insta_icon {
+	width: 42px;
+}
+
+.title_area .insta_icon img { width: 100%;}
+
+.title_area .img_area {
+	width: 300px;
+}
+.title_area .img_area img { width: 100%;}
+
+.text1 {
+	border-bottom: 1px solid #c7c7c7;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+.text2 {
+	padding-bottom: 200px;
+}
+
+.text1 p,.text2 p{
+	font-size: 15px;
+	line-height: 1.8em;
+	font-weight: 300;
+	
+}
+
+@media screen and (max-width:768px){
+	.content {
+		padding: 120px 0 0;
+		color: #000000;
+	}
+
+	.content .inner {
+		width: 88%;
+		margin: 0 auto;
+	}
+
+	.content .inner .page_back {
+		margin-bottom: 10px;
+		font-size: 15px;
+		letter-spacing: 0.08em;
+	}
+	.content .inner .page_back a{
+		font-weight: 300;
+	}
+
+
+	.title_area {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		flex-wrap: wrap;
+	}
+	
+	.title_area .text_area { order: 2; width: 100%; text-align: center;}
+
+	.title_area h1 { 
+		font-size: 28px;
+		margin-bottom: 10px;
+		font-weight: 300;
+	}
+
+	.title_area p {
+		font-size: 16px;
+		margin-bottom: 0;
+		font-weight: 300;
+	}
+
+	.title_area .insta_icon {
+		width: 15%;
+		margin-left: auto;
+		padding-right: 5%;
+	}
+
+	.title_area .insta_icon img { width: 100%;}
+
+	.title_area .img_area {
+		width: 64%;
+		margin: 0 auto 16px;
+		order: 1;
+	}
+	.title_area .img_area img { width: 100%;}
+
+	.text1 {
+		border-bottom: 1px solid #c7c7c7;
+		padding-bottom: 20px;
+		margin-bottom: 40px;
+	}
+
+	.text2 {
+		padding-bottom: 160px;
+	}
+
+	.text1 p,.text2 p{
+		font-size: 15px;
+		line-height: 1.8em;
+		font-weight: 300;
+
+	}
+
+}

@@ -1,0 +1,890 @@
+@charset "UTF-8";
+
+
+
+
+/* layout
+---------------------------------------------------------- */
+body {
+	background:#ffffff;
+}
+
+
+
+/* content
+---------------------------------------------------------- */
+
+.content {
+	padding: 71px 0 0;
+	color: #000000;
+}
+
+.content .main_area {
+	width: 100%;
+	position: relative;
+	margin-bottom: 30px;
+}
+.content .main_area img {
+	width: 100%;
+}
+
+.content .main_area h1 {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 130px;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+@media screen and (max-width:768px){
+	
+	.content {
+		padding: 59px 0 0;
+		color: #000000;
+	}
+
+	.content .main_area {
+		width: 100%;
+		position: relative;
+		margin-bottom: 30px;
+	}
+	.content .main_area img {
+		width: 100%;
+	}
+
+	.content .main_area h1 {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		top: 10%;
+		font-size: 96%;
+		font-weight: 600;
+	}
+
+
+}
+
+.content .about {
+}
+
+.content .about h2 {
+	color: #3d9be9;
+	font-size: 34px;
+ 	text-align: center;
+			margin-bottom: 30px;
+}
+
+.content .about p {
+	width: 890px;
+	margin: 0 auto 30px;
+	font-size: 18px;
+ 	letter-spacing: 0.05em;
+ 	font-weight: 300;
+ 	line-height: 1.5em;
+}
+
+
+
+@media screen and (max-width:768px){
+	.content .about {
+	}
+
+	.content .about h2 {
+		color: #3d9be9;
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.content .about p {
+		width: 88%;
+		margin: 0 auto 30px;
+		font-size: 20px;
+		letter-spacing: 0.05em;
+		font-weight: 300;
+		line-height: 1.5em;
+	}
+
+
+}
+
+
+.content .goal {
+	margin-bottom: 60px;
+}
+
+.content .goal h3 {
+	color: #3d9be9;
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+
+.content .goal h3 span.circle-num {
+	  display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	  width: 1.2em;               /* 丸の幅（文字サイズに比例） */
+	  height: 1.2em;              /* 丸の高さ */
+	  background-color: #3d9be9;  /* 背景色（黒） */
+	  color: #ffffff;             /* 文字色（白） */
+	  border-radius: 50%;         /* 完全な正円にする */
+	  font-size: 46px;           /* バランスを見て文字を少し小さく */
+	  font-weight: nomal;          /* 数字を太字に */
+	  margin-right: 0.1em;        /* 右側に少し余白を作る */
+}
+
+.content .goal .goal_box {
+	width: 980px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	
+}
+.content .goal .goal_box div {
+	width: 306px;
+	background: url("../img/goal_bg.jpg") no-repeat center top;
+	background-size:100% 100%;
+	padding: 40px 0;
+	box-sizing: border-box;
+	
+}
+
+.content .goal .goal_box div dl {
+	height: 180px;
+	padding: 30px 15px;
+	background: #e5f0fe;
+	box-sizing: border-box;
+}
+
+.content .goal .goal_box div dl dt {
+	font-size: 18px;
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.content .goal .goal_box div dl dd {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+@media screen and (max-width:768px){
+	
+	.content .goal h3 {
+		color: #3d9be9;
+		text-align: center;
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+
+	.content .goal h3 span.circle-num {
+		  display: inline-flex;
+		  align-items: center;
+		  justify-content: center;
+		  width: 1.2em;               /* 丸の幅（文字サイズに比例） */
+		  height: 1.2em;              /* 丸の高さ */
+		  background-color: #3d9be9;  /* 背景色（黒） */
+		  color: #ffffff;             /* 文字色（白） */
+		  border-radius: 50%;         /* 完全な正円にする */
+		  font-size: 26px;           /* バランスを見て文字を少し小さく */
+		  font-weight: nomal;          /* 数字を太字に */
+		  margin-right: 0.1em;        /* 右側に少し余白を作る */
+	}
+
+	.content .goal .goal_box {
+		width: 76%;
+		display: block;
+		justify-content: space-between;
+		margin: 0 auto;
+
+	}
+	.content .goal .goal_box div {
+		width: 100%;
+		background: url("../img/goal_bg.jpg") no-repeat center top;
+		background-size:100% 100%;
+		padding: 40px 10px;
+		box-sizing: border-box;
+		margin-bottom: 30px;
+
+	}
+
+	.content .goal .goal_box div dl {
+		height: auto;
+		padding: 30px 15px;
+		background: #e5f0fe;
+		box-sizing: border-box;
+
+	}
+
+	.content .goal .goal_box div dl dt {
+		font-size: 20px;
+		text-align: center;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+
+	.content .goal .goal_box div dl dd {
+		font-size: 18px;
+		line-height: 1.5em;
+		font-weight: 300;
+	}
+
+	
+}
+
+.curriculum { margin-bottom: 50px;}
+.curriculum h3 { font-size: 28px; text-align: center; color: #3d9be9; margin-bottom: 30px;}
+
+.curriculum_line {
+	display: flex;
+	align-items: center;
+	background: #72bcd9;
+}
+
+.curriculum_line .image_area {
+	width: 50%;
+}
+.curriculum_line .image_area img { width: 100%;}
+.curriculum_line .detail_area {
+	width: 50%;
+	background: #72bcd9;
+}
+
+.curriculum_line .detail_area h4 {
+	font-size: 38px;
+	font-weight: bold;
+	color: #ffffff;
+	letter-spacing: 0.1em;
+	text-align: center;
+	line-height: 1.2em;
+}
+
+.curriculum_line .detail_area h4 span {
+	font-weight: normal;
+	font-size:28px;
+}
+
+.curriculum_line .detail_area .txt_box { text-align: center; margin: 10px 0 20px;}
+.curriculum_line .detail_area .txt_box p {
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 1.6em;
+}
+
+.curriculum_line .detail_area .btn {
+	
+}
+
+
+.curriculum_line .detail_area .btn a{
+	font-size: 14px;
+	font-weight: normal;
+	border-radius: 120px;
+	display: block;
+	background: #ffffff;
+	width: 280px;
+	text-align: center;
+	color: #72bcd9;
+	padding: 14px 0;
+	box-sizing: border-box;
+	margin: 0 auto;
+	letter-spacing: 0.2em;
+}
+
+.curriculum_line .detail_area .btn a:hover {
+	background: #4682b4;
+	color: #ffffff;
+	opacity: 1;
+	box-sizing: border-box;
+}
+
+
+@media screen and (max-width:768px){
+	
+	.curriculum { margin-bottom: 50px;}
+	.curriculum h3 { font-size: 20px; text-align: center; color: #3d9be9; margin-bottom: 30px;}
+
+	.curriculum_line {
+		display: flex;
+		align-items: center;
+		background: #72bcd9;
+		flex-wrap: wrap;
+	}
+
+	.curriculum_line .image_area {
+		width: 100%;
+	}
+	.curriculum_line .image_area img { width: 100%;}
+	.curriculum_line .detail_area {
+		width: 100%;
+		background: #72bcd9;
+		padding: 30px 0;
+	}
+	
+	.curriculum_line .dance_txt { order: 2;}
+	.curriculum_line .dance_img { order: 1;}
+
+	.curriculum_line .detail_area h4 {
+		font-size: 26px;
+		font-weight: bold;
+		color: #ffffff;
+		letter-spacing: 0.1em;
+		text-align: center;
+		line-height: 1.2em;
+	}
+
+	.curriculum_line .detail_area h4 span {
+		font-weight: normal;
+		font-size:22px;
+	}
+
+	.curriculum_line .detail_area .txt_box { text-align: center; margin: 10px 0 20px;}
+	.curriculum_line .detail_area .txt_box p {
+		color: #ffffff;
+		font-size: 18px;
+		line-height: 1.6em;
+	}
+
+	.curriculum_line .detail_area .btn {
+
+	}
+
+
+	.curriculum_line .detail_area .btn a{
+		font-size: 16px;
+		font-weight: normal;
+		border-radius: 120px;
+		display: block;
+		background: #ffffff;
+		width: 60%;
+		text-align: center;
+		color: #72bcd9;
+		padding: 14px 0;
+		box-sizing: border-box;
+		margin: 0 auto;
+		letter-spacing: 0.2em;
+	}
+
+	.curriculum_line .detail_area .btn a:hover {
+		background: #4682b4;
+		color: #ffffff;
+		opacity: 1;
+		box-sizing: border-box;
+	}
+
+	
+}
+
+
+
+.price { margin-bottom: 50px;}
+.price h3 { font-size: 28px; text-align: center; color: #3d9be9; margin-bottom: 30px;}
+.price h3 span { color: #000000;}
+.price p { font-size: 18px; text-align:center; margin-bottom: 40px;}
+.price h4 { color: #3d9be9;  font-size: 28px; text-align:center; margin-bottom: 40px;}
+
+.price dl { 
+	width: 728px;
+	margin: 0 auto;
+	font-weight: 300;
+}
+.price dl dt {
+	font-size: 28px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.price dl dt span {
+	font-size: 67px;
+	font-weight: bold;
+	color: #72bcd9;
+	display: block;
+	padding-right: 20px;
+}
+
+.price dl dd {
+	border-bottom: 3px solid #72bcd9;
+	font-size: 18px;
+	line-height: 1.5em;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
+}
+
+@media screen and (max-width:768px){
+	
+	.price { margin-bottom: 50px;}
+	.price h3 { font-size: 20px; text-align: center; color: #3d9be9; margin-bottom: 30px;}.price h3 span { color: #000000;}
+	.price p { font-size: 20px; text-align:left; width: 78%; margin: 0 auto 40px; line-height: 1.5em; }
+	.price h4 { color: #3d9be9;  font-size: 24px; width: 76%; text-align:left; margin: 0 auto 40px; line-height: 1.4em;}
+
+	.price dl { 
+		width: 88%;
+		margin: 0 auto;
+		font-weight: 300;
+	}
+	.price dl dt {
+		font-size: 32px;
+		display: block;
+		align-items: center;
+		margin-bottom: 10px;
+		line-height: 1.4em;
+	}
+	.price dl dt span {
+		font-size: 40px;
+		font-weight: bold;
+		color: #72bcd9;
+		display: block;
+		padding-right: 0;
+		margin-bottom: 16px;
+	}
+
+	.price dl dd {
+		border-bottom: 3px solid #72bcd9;
+		font-size: 20px;
+		line-height: 1.5em;
+		padding-bottom: 20px;
+		margin-bottom: 50px;
+	}
+
+}
+
+
+.development {
+	width: 920px;
+	margin: 0 auto 60px;
+	font-weight: 300;
+}
+
+.development h3 {
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+
+.development .detail_area {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.development .detail_area p {
+	font-size: 18px;
+	width: 638px;
+	line-height: 1.5em;
+}
+
+.development .detail_area div {
+	width: 252px;
+}
+
+.development .detail_area div img {
+	width: 100%;
+}
+
+.development .btn {}
+
+
+.development .btn a{
+	font-size: 14px;
+	font-weight: normal;
+	border-radius: 120px;
+	display: block;
+	background: #72bcd9;
+	width: 540px;
+	text-align: center;
+	color: #ffffff;
+	padding: 14px 0;
+	box-sizing: border-box;
+	margin: 0 auto;
+	letter-spacing: 0.2em;
+	border: solid 3px #72bcd9;
+}
+
+.development .btn a:hover {
+	background: #ffffff;
+	color: #72bcd9;
+	opacity: 1;
+	box-sizing: border-box;
+	border: solid 3px #72bcd9;
+}
+
+@media screen and (max-width:768px){
+		
+	.development {
+		width: 88%;
+		margin: 0 auto 50px;
+		font-weight: 300;
+	}
+
+	.development h3 {
+		font-size: 24px;
+		padding-top: 20px;
+		margin-bottom: 30px;
+		line-height: 1.4em;
+	}
+
+	.development .detail_area {
+		display: block;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	.development .detail_area p {
+		font-size: 20px;
+		width: 100%;
+		line-height: 1.5em;
+		margin-bottom: 20px;
+	}
+
+	.development .detail_area div {
+		width: 100%;
+	}
+
+	.development .detail_area div img {
+		width: 100%;
+	}
+
+	.development .btn {}
+
+
+	.development .btn a{
+		font-size: 14px;
+		font-weight: normal;
+		border-radius: 120px;
+		display: block;
+		background: #72bcd9;
+		width: 100%;
+		text-align: center;
+		color: #ffffff;
+		padding: 14px 0;
+		box-sizing: border-box;
+		margin: 0 auto;
+		letter-spacing: 0.2em;
+		border: solid 3px #72bcd9;
+	}
+
+	.development .btn a:hover {
+		background: #ffffff;
+		color: #72bcd9;
+		opacity: 1;
+		box-sizing: border-box;
+		border: solid 3px #72bcd9;
+	}
+	
+}
+
+.flow {
+	width: 960px;
+	margin: 0 auto 60px;
+}
+
+.flow img {
+	width: 100%;
+}
+
+.flow .flow1 {
+	margin-bottom: 30px;
+}
+
+.flow .flow1 p{
+	font-size: 16px;
+	display: inline-block;
+	color: #ffffff;
+	background: #72bcd9;
+	padding: 6px 20px;
+	margin: 20px 0;
+}
+
+.flow .flow2 div {
+	width: 895px;
+	margin: 0 auto;
+	font-weight: 300;
+}
+
+.flow .flow2 div p {
+	margin: 20px 0 40px;
+	font-size: 18px;
+}
+
+.flow .flow2 div h3 {
+	color: #3d9be9;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.flow .flow2 div ul li {
+  position: relative;
+	font-size: 18px;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #e3e3e3;
+	padding: 10px;
+	text-align: center;
+	line-height: 1.4em;
+  	margin-bottom: 40px; /* 三角形が入る分の余白 */
+}
+
+
+/* 最後のli以外に三角形を表示 */
+.flow .flow2 div ul > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* liとliの余白の広さに合わせて調整してください */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* 横幅142pxの三角形（71px + 71px） */
+  width: 0;
+  height: 0;
+  border-left: 71px solid transparent;
+  border-right: 71px solid transparent;
+  border-top: 20px solid #72bcd9; /* 色と高さ（高さはお好みで変更可能） */
+}
+
+/* 最後のliの下はマージンをなくす */
+.flow .flow2 div ul > li:last-child {
+  margin-bottom: 0;
+}
+
+
+@media screen and (max-width:768px){
+	
+	.flow {
+		width: 96%;
+		margin: 0 auto 40px;
+	}
+
+	.flow img {
+		width: 100%;
+	}
+
+	.flow .flow1 {
+		margin-bottom: 20px;
+	}
+
+	.flow .flow1 p{
+		width: 60%;
+		text-align: center;
+		font-size: 16px;
+		display:block;
+		color: #ffffff;
+		background: #72bcd9;
+		padding: 10px 20px;
+		margin: 20px auto 0;
+	}
+
+	.flow .flow2 div {
+		width: 100%;
+		margin: 0 auto;
+		font-weight: 300;
+	}
+
+	.flow .flow2 div p {
+		margin: 20px 0;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.flow .flow2 div h3 {
+		color: #3d9be9;
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.flow .flow2 div ul li {
+	  position: relative;
+		font-size: 16px;
+		box-sizing: border-box;
+		width: 100%;
+		border: 1px solid #e3e3e3;
+		padding: 10px;
+		text-align: center;
+		line-height: 1.4em;
+		margin-bottom: 36px; /* 三角形が入る分の余白 */
+	}
+
+
+	/* 最後のli以外に三角形を表示 */
+	.flow .flow2 div ul > li:not(:last-child)::after {
+	  content: "";
+	  position: absolute;
+	  bottom: -20px; /* liとliの余白の広さに合わせて調整してください */
+	  left: 50%;
+	  transform: translateX(-50%);
+
+	  /* 横幅142pxの三角形（71px + 71px） */
+	  width: 0;
+	  height: 0;
+	  border-left: 71px solid transparent;
+	  border-right: 71px solid transparent;
+	  border-top: 20px solid #72bcd9; /* 色と高さ（高さはお好みで変更可能） */
+	}
+
+	/* 最後のliの下はマージンをなくす */
+	.flow .flow2 div ul > li:last-child {
+	  margin-bottom: 0;
+	}
+
+	
+}
+
+
+.instructor {
+	background: #fafafa;
+	padding: 80px 0;
+}
+
+.instructor h2 {
+	font-size: 34px;
+	text-align: center;
+	color: #3d9be9;
+	margin-bottom: 80px;
+}
+
+
+
+.instructor .inst_box {
+    max-width: 894px; /* 固いwidthではなく最大幅にする */
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    /* 要素の数に合わせて自動で列数を調整する設定 */
+    grid-template-columns: repeat(auto-fit, 216px);
+    /* 少ないときに全体を中央に寄せるマジックワード */
+    justify-content: center;
+    gap: 100px;
+}
+
+.instructor .inst_box dl {
+    box-sizing: border-box;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+
+.instructor .inst_box dl dt {
+	margin-bottom: 30px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.instructor .inst_box dl dt img {
+	width: 100%;
+  	height: 100%;
+  	object-fit: cover;
+}
+
+.instructor .inst_box dl dd {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.instructor .inst_box dl dd.btn {}
+
+
+.instructor .inst_box dl dd.btn a {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 30px auto 0;
+	display: block;
+	padding: 10px 5px;
+	background-color: #ffffff;/* ボタンの背景色 */
+	color: #72bcd9;            /* 文字色 */
+	text-decoration: none;     /* 下線を消す */
+	border-radius: 30px;        /* 角丸 */
+	font-weight: 400;
+	border: 3px solid #72bcd9;
+	font-size: 15px;
+	letter-spacing: 0.1em;
+}
+/* ホバー時の装飾（任意） */
+.instructor .inst_box dl dd.btn a:hover {
+	box-sizing: border-box;
+  background-color: #72bcd9;
+	color: #ffffff;
+}
+
+
+
+@media screen and (max-width:768px){
+	.instructor {
+		background: #fafafa;
+		padding: 40px 0;
+	}
+
+	.instructor h2 {
+		font-size: 20px;
+		text-align: center;
+		color: #3d9be9;
+		margin-bottom: 40px;
+	}
+
+
+
+	.instructor .inst_box {
+		max-width: 894px; /* 固いwidthではなく最大幅にする */
+		width: 66%;
+		margin: 0 auto;
+		display: block;
+		/* 要素の数に合わせて自動で列数を調整する設定 */
+		grid-template-columns: repeat(auto-fit, 100%);
+		/* 少ないときに全体を中央に寄せるマジックワード */
+		justify-content: center;
+	}
+
+	.instructor .inst_box dl {
+		box-sizing: border-box;
+		text-align: center;
+		padding-bottom: 60px;
+	}
+
+
+
+	.instructor .inst_box dl dt {
+		margin-bottom: 20px;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+
+	.instructor .inst_box dl dt img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.instructor .inst_box dl dd {
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.instructor .inst_box dl dd.btn {}
+
+
+	.instructor .inst_box dl dd.btn a {
+		box-sizing: border-box;
+		width: 80%;
+		margin: 20px auto 0;
+		display: block;
+		padding: 10px 5px;
+		background-color: #ffffff;/* ボタンの背景色 */
+		color: #72bcd9;            /* 文字色 */
+		text-decoration: none;     /* 下線を消す */
+		border-radius: 30px;        /* 角丸 */
+		font-weight: 400;
+		border: 3px solid #72bcd9;
+		font-size: 18px;
+		letter-spacing: 0.1em;
+	}
+	/* ホバー時の装飾（任意） */
+	.instructor .inst_box dl dd.btn a:hover {
+		box-sizing: border-box;
+	  background-color: #72bcd9;
+		color: #ffffff;
+	}
+
+	
+}

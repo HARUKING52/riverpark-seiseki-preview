@@ -1,0 +1,696 @@
+@charset "UTF-8";
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html { scroll-behavior: smooth;}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.brpc { display:block;}
+.brsp { display:none;}
+
+@media screen and (max-width:768px){
+
+.brpc { display:none;}
+.brsp { display:block;}
+}
+
+/* 
+---------------------------------------------------------- */
+html {
+	overflow: auto;
+}
+
+body {
+	font-family: "Noto Sans JP", "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-serif;
+	font-weight: nomal;
+	color:#333333;
+	min-width:1200px;
+	overflow:hidden;
+	letter-spacing:0.02em;
+}
+
+body img {
+	vertical-align:bottom;
+}
+
+@media screen and (max-width:768px){
+	
+body {
+	min-width:100%;
+}
+}
+
+.wrap {
+	font-size: 62.5%;
+}
+.wrap *{
+	box-sizing: border-box;
+}
+.wraps ul li{
+	list-style: none;
+}
+
+@media screen and (max-width:768px){
+	.wrap {
+		min-width: 100%;
+	}
+	.wrap img{
+		width: 100%;
+	}
+}
+
+/* Modules
+---------------------------------------------------------- */
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+	font-size: 0.1em;
+}
+.clearfix{
+	display:block;
+}
+
+
+.onlySP { display:none;}
+
+@media screen and (max-width:768px){
+	.onlyPC { display: none;}
+	.onlySP { display: block;}
+	.wrap img.onlySP { display: inline-block;}
+}
+
+
+/* common
+---------------------------------------------------------*/
+a:hover {
+	filter: alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity:0.7;
+}
+
+a {
+	color:#221815;
+	text-decoration:none;
+}
+
+
+
+
+
+
+
+/* head
+---------------------------------------------------------- */
+
+
+header {
+	width:100%;
+	margin:0 auto;
+	background: #ffffffcc;
+	position: fixed;
+	z-index: 100;
+	
+}
+
+header .inner {
+	width: 980px;
+	height: 71px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .sp_navi {
+	display:none;
+}
+
+header h1 { width: 149px;}
+header h1 img { width: 100%;}
+
+header .inner .nav {
+	display: flex;
+	font-size: 12px;
+	width: 596px;
+	justify-content: space-between;
+}
+header .inner .nav li a {
+	color: rgb(65, 79, 100);
+}
+
+header .inner .head_contact a{
+	font-size: 12px;
+	border-radius: 100px;
+	display: block;
+	background: #72bcd9;
+	width: 179px;
+	text-align: center;
+	color: #ffffff;
+	padding: 9px 0;
+}
+
+header .inner .head_contact a:hover {
+	border: 3px solid #72bcd9;
+	background: #ffffff;
+	color: #72bcd9;
+	opacity: 1;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width:768px){
+	
+	body img {
+		width:100%;
+		vertical-align: bottom;
+	}
+
+	header {
+		width:100%;
+		margin:0 auto;
+		background: #ffffffcc;
+		position: fixed;
+		z-index: 100;
+
+	}
+
+	header .inner {
+		width: 100%;
+		height: 59px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+
+	header h1 { 
+		width: 38%;
+		height: auto;
+		position: relative;
+ 		 left: 9px;
+	
+	}
+	header h1 img { width: 100%;}
+
+	header .inner .nav {
+		display: none;
+	}
+	header .inner .head_contact { margin-left: 6%;}
+	header .inner .head_contact a{
+		width: 120%;
+		font-size: 12px;
+		border-radius: 100px;
+		display: block;
+		background: #72bcd9;
+		text-align: center;
+		color: #ffffff;
+		padding: 12px 0;
+	}
+
+	header .inner .head_contact a:hover {
+		border: 3px solid #72bcd9;
+		background: #ffffff;
+		color: #72bcd9;
+		opacity: 1;
+		box-sizing: border-box;
+	}
+	
+	
+	
+	
+	
+
+	header .sp_navi {
+		display:block;
+	}
+
+	#nav-toggle {
+	  position: fixed;
+	  top: 16px;
+	  right: 3%;
+	  height: 27px;
+	  cursor: pointer;
+	}
+	#nav-toggle > div {
+	  position: relative;
+	  width: 30px;
+	}
+	#nav-toggle span {
+	  width: 100%;
+	  height: 3px;
+	  left: 0;
+	  display: block;
+	  background: #000000;
+	  position: absolute;
+	  transition: top .5s ease, -webkit-transform .6s ease-in-out;
+	  transition: transform .6s ease-in-out, top .5s ease;
+	  transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
+	}
+	#nav-toggle span:nth-child(1) {
+	  top: 0px;
+	}
+	#nav-toggle span:nth-child(2) {
+	  top: 10px;
+	}
+	#nav-toggle span:nth-child(3) {
+	  top: 20px;
+	}
+	
+	.open #nav-toggle span {
+	  background: #000000;
+	}
+	.open #nav-toggle span:nth-child(1) {
+	  top: 15px;
+	  -webkit-transform: rotate(45deg);
+			  transform: rotate(45deg);
+	}
+	.open #nav-toggle span:nth-child(2) {
+		display:none;
+	}
+	.open #nav-toggle span:nth-child(3) {
+	  top: 15px;
+	  -webkit-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+	}
+	
+	/* z-index */
+	#nav-toggle {
+	  z-index: 100000;
+	}
+	
+	#container {
+	  z-index: 9999;
+	}
+	
+	#gloval-nav {
+		width:70%;
+	  background: #fff;
+	  color: #333;
+	  position: fixed;
+	  top: 0;
+	  right: -100%;
+	  bottom: 0;
+	  z-index: 9999;
+	  text-align: left;
+	  font-size: 14px;
+	  opacity: 0;
+	  transition: all 0.6s;
+	}
+	
+	#gloval-nav a {
+	  display: block;
+	color: rgb(65, 79, 100);
+	  text-decoration: none;
+	  padding: 0 0 30px;
+	  transition: color .6s ease;
+	  font-size:16px;
+	  font-weight:400;
+	}
+	#gloval-nav a:hover {
+		opacity:0.7;
+	}
+	#gloval-nav ul {
+		padding:80px 10% 0;
+	  list-style: none;
+	}
+	#gloval-nav ul li {
+		width:100%;
+		text-align: right;
+	}
+	
+	
+	/* open */
+	.open {
+	  overflow: hidden;
+	}
+	.open #gloval-nav {
+	  visibility: visible;
+	   transform: translate(0);
+	  opacity:0.9;
+	  right: 0;
+	}
+	.open #gloval-nav li {
+	  opacity: 1;
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  transition: opacity .9s ease, -webkit-transform 1s ease;
+	  transition: transform 1s ease, opacity .9s ease;
+	  transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
+	}
+}
+
+
+
+/* content
+---------------------------------------------------------- */
+.content {
+	padding-top: 71px;
+}
+
+
+@media screen and (max-width:768px){
+	.content {
+		padding-top: 59px;
+	}
+}
+
+/* footer
+---------------------------------------------------------- */
+
+
+@media screen and (max-width:768px){
+}
+
+
+/* modal
+---------------------------------------------------------- */
+/* ==========================================
+   モーダル全体の背景（他の影響を受けないようガード）
+========================================== */
+.modal-bg {
+  position: fixed; /* 画面に対して固定（親要素が指定されていても画面全体に広がります） */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* 親要素のoverflow:hiddenで消されないように最前面に配置 */
+  z-index: 9999; 
+  
+  /* 初期状態（非表示・透明） */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* ==========================================
+   背景クリック用の透明リンク（画面全体に敷く）
+========================================== */
+.modal-overlay-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  display: block; /* 確実にリンク領域を広げる */
+}
+
+/* ==========================================
+   モーダルの白枠（コンテンツ部分）
+========================================== */
+.modal-content {
+  background: #ffffff;
+  padding: 96px 106px;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 908px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+  
+  /* 透明リンクより上に重ねる設定 */
+  position: relative;
+  z-index: 10000; 
+  
+  /* アニメーションの初期状態（少し下に下げて、透明にしておく） */
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-content h3 {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 56px;
+}
+
+.modal-content h3 span {
+	font-size: 20px;
+}
+
+.modal-content p {
+	font-size: 17px;
+	line-height: 2.0em;
+	letter-spacing: 0.14em;
+	margin-bottom: 56px
+}
+
+/* ==========================================
+   ★ 動かすためのトリガー（:target）
+========================================== */
+/* ボタンが押されてURLの末尾が「#modal1」になった時 */
+.modal-bg:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 背景が表示されたら、連動して中の白枠を上に上げつつクッキリ見せる */
+.modal-bg:target .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- 閉じるボタンの簡易装飾 --- */
+.close-btn {
+	margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+  padding: 14px 16px;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 30px;
+	border: 1px solid #000;
+	width: 200px;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 15px;
+	font-weight: bold;
+}
+.close-btn:hover {
+	color: #ffffff;
+	background: #000000;
+	opacity: 1;
+}
+
+
+.modal-content p span {
+	text-align: center;
+	display:block;
+}
+
+.modal-content p a {
+	text-decoration: underline;
+}
+
+
+@media screen and (max-width:768px){
+	
+	/* ==========================================
+	   モーダル全体の背景（他の影響を受けないようガード）
+	========================================== */
+	.modal-bg {
+	  position: fixed; /* 画面に対して固定（親要素が指定されていても画面全体に広がります） */
+	  top: 0;
+	  left: 0;
+	  width: 100vw;
+	  height: 100vh;
+	  background: rgba(0, 0, 0, 0.4);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+
+	  /* 親要素のoverflow:hiddenで消されないように最前面に配置 */
+	  z-index: 9999; 
+
+	  /* 初期状態（非表示・透明） */
+	  opacity: 0;
+	  visibility: hidden;
+	  transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+
+	/* ==========================================
+	   背景クリック用の透明リンク（画面全体に敷く）
+	========================================== */
+	.modal-overlay-trigger {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  cursor: default;
+	  display: block; /* 確実にリンク領域を広げる */
+	}
+
+	/* ==========================================
+	   モーダルの白枠（コンテンツ部分）
+	========================================== */
+	.modal-content {
+	  background: #ffffff;
+	  padding: 34px 4% 16px;
+	  border-radius: 30px;
+	  width: 82%;
+	  max-width: 908px;
+	  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+		box-sizing: border-box;
+
+	  /* 透明リンクより上に重ねる設定 */
+	  position: relative;
+	  z-index: 10000; 
+
+	  /* アニメーションの初期状態（少し下に下げて、透明にしておく） */
+	  transform: translateY(30px);
+	  opacity: 0;
+	  transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+	.modal-content h3 {
+		font-size: 22px;
+		text-align: center;
+		margin-bottom: 26px;
+		line-height: 1.5em;
+	}
+
+	.modal-content h3 span {
+		font-size: 16px;
+	}
+
+	.modal-content p {
+		font-size: 14px;
+		line-height: 2.0em;
+		letter-spacing: 0.14em;
+		margin-bottom: 32px
+	}
+	
+	.modal-content p.smaller {
+		font-size: 13px;
+		line-height: 1.4em;
+		letter-spacing: 0em;
+	}
+
+	/* ==========================================
+	   ★ 動かすためのトリガー（:target）
+	========================================== */
+	/* ボタンが押されてURLの末尾が「#modal1」になった時 */
+	.modal-bg:target {
+	  opacity: 1;
+	  visibility: visible;
+	}
+
+	/* 背景が表示されたら、連動して中の白枠を上に上げつつクッキリ見せる */
+	.modal-bg:target .modal-content {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+
+	/* --- 閉じるボタンの簡易装飾 --- */
+	.close-btn {
+		margin: 0 auto;
+	  display: block;
+	  margin-top: 15px;
+	  padding: 14px 16px;
+	  background: #fff;
+	  color: #333;
+	  text-decoration: none;
+	  border-radius: 30px;
+		border: 1px solid #000;
+		width: 70%;
+		text-align: center;
+		box-sizing: border-box;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.close-btn:hover {
+		color: #ffffff;
+		background: #000000;
+		opacity: 1;
+	}
+}
+
+
+
+/* footer
+------------------------------------------------------------------------------------------------------------------------------------- */
+
+footer {
+	background: #333333;
+	color: #ffffff;
+	padding: 30px 5%;
+	text-align: center;
+}
+
+footer p {
+	font-size: 13px;
+	letter-spacing: 0.06em;
+	font-weight: 400;
+	line-height: 1.5em;
+}
+
+footer p.footer_link {
+	margin-bottom: 16px;
+}
+
+footer a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+@media screen and (max-width:768px){
+	
+	
+}
