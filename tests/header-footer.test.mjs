@@ -22,6 +22,7 @@ test('extracted Instagram MP4 and JPG assets exist in img/insta/ and are non-emp
     'img/insta/kids_dance_river.mp4',
     'img/insta/ayumi_riverside_yoga.mp4',
     'img/insta/ai_aroma_yoga.mp4',
+    'img/insta/upcycle_event.mp4',
     'img/insta/bouldering_school_1.jpg',
     'img/insta/kids_bouldering_interview.jpg',
     'img/insta/maiko_pilates_1.jpg',

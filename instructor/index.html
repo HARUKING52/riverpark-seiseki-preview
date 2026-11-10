@@ -143,11 +143,11 @@
       <h2>FILTER BY CATEGORY<br><span>担当カテゴリーから探す</span></h2>
 
       <ul class="rp-filter-tabs">
-        <li class="rp-filter-tab is-active" data-filter="all">ALL（全員）</li>
-        <li class="rp-filter-tab" data-filter="studio">STUDIO（ヨガ・ピラティス・TRX）</li>
-        <li class="rp-filter-tab" data-filter="outdoor">OUTDOOR（ラン・ウォーク・SUP）</li>
-        <li class="rp-filter-tab" data-filter="bouldering">BOULDERING</li>
-        <li class="rp-filter-tab" data-filter="kids">KIDS SCHOOL</li>
+        <li class="rp-filter-tab is-active" data-filter="all" role="button" tabindex="0" aria-pressed="true">ALL（全員）</li>
+        <li class="rp-filter-tab" data-filter="studio" role="button" tabindex="0" aria-pressed="false">STUDIO（ヨガ・ピラティス・TRX）</li>
+        <li class="rp-filter-tab" data-filter="outdoor" role="button" tabindex="0" aria-pressed="false">OUTDOOR（ラン・ウォーク・SUP）</li>
+        <li class="rp-filter-tab" data-filter="bouldering" role="button" tabindex="0" aria-pressed="false">BOULDERING</li>
+        <li class="rp-filter-tab" data-filter="kids" role="button" tabindex="0" aria-pressed="false">KIDS SCHOOL</li>
       </ul>
     </div>
   </section>
@@ -573,10 +573,10 @@
 
 <script>
 $(function() {
-  $('.rp-filter-tab').on('click', function() {
-    $('.rp-filter-tab').removeClass('is-active');
-    $(this).addClass('is-active');
-    var filter = $(this).data('filter');
+  function applyFilter($tab) {
+    $('.rp-filter-tab').removeClass('is-active').attr('aria-pressed', 'false');
+    $tab.addClass('is-active').attr('aria-pressed', 'true');
+    var filter = $tab.data('filter');
     if (filter === 'all') {
       $('.inst-card-item').fadeIn(200);
     } else {
@@ -588,6 +588,17 @@ $(function() {
           $(this).hide();
         }
       });
+    }
+  }
+
+  $('.rp-filter-tab').on('click', function() {
+    applyFilter($(this));
+  });
+
+  $('.rp-filter-tab').on('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      applyFilter($(this));
     }
   });
 });

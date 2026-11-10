@@ -71,6 +71,8 @@ test('instructor directory page (instructor/index.html) exists and has filter ta
   assert.ok(html.includes('OUTDOOR'), 'must include OUTDOOR filter');
   assert.ok(html.includes('BOULDERING'), 'must include BOULDERING filter');
   assert.ok(html.includes('KIDS'), 'must include KIDS filter');
+  assert.ok(html.includes('role="button"'), 'instructor filter tabs must have role="button"');
+  assert.ok(html.includes('tabindex="0"'), 'instructor filter tabs must have tabindex="0"');
 
   // 31 instructor cards
   const instructorLinks = (html.match(/href="[^"]*instructor\/[^"]+\.html"/g) || []).length;
@@ -89,6 +91,9 @@ test('studio/index.html renders 22 classes in .rp-grid-3 and upgrades all 22 mod
 
   assert.ok(html.includes('rp-grid-3'), 'studio page must include .rp-grid-3');
   assert.ok(html.includes('rp-modal-detail'), 'studio page must use .rp-modal-detail');
+
+  const css = fs.readFileSync(path.join(root, 'common/css/subpage-gentle.css'), 'utf8');
+  assert.ok(css.includes('max-height: 90vh') && css.includes('overflow-y: auto'), '.rp-modal-detail must have max-height: 90vh and overflow-y: auto in common/css/subpage-gentle.css');
 
   // Check 22 modal IDs
   const yogaIds = Array.from({ length: 15 }, (_, i) => `program1_${i + 1}`);
@@ -154,4 +159,19 @@ test('bouldering and kids subpages include .rp-grid-3 and official Instagram emb
   assert.ok(kids.includes('DfbtP2cqvpS'), 'kids page must include DfbtP2cqvpS embed');
   assert.ok(kids.includes('DcLDyN4E4jk'), 'kids page must include DcLDyN4E4jk embed');
   assert.ok(kids.includes('kids_dance_river.mp4'), 'kids page must include kids_dance_river.mp4');
+});
+
+test('subpage-gentle modal overflow guard and instructor filter tab keyboard accessibility', () => {
+  const css = fs.readFileSync(path.join(root, 'common/css/subpage-gentle.css'), 'utf8');
+  assert.ok(css.includes('max-height: 90vh'), '.rp-modal-detail must have max-height: 90vh');
+  assert.ok(css.includes('overflow-y: auto'), '.rp-modal-detail must have overflow-y: auto');
+  assert.ok(css.includes('-webkit-overflow-scrolling: touch'), '.rp-modal-detail must have -webkit-overflow-scrolling: touch');
+  assert.ok(css.includes('.rp-filter-tab:focus-visible'), '.rp-filter-tab must have focus-visible styling');
+
+  const instHtml = fs.readFileSync(path.join(root, 'instructor/index.html'), 'utf8');
+  assert.ok(instHtml.includes('role="button"'), 'instructor filter tabs must have role="button"');
+  assert.ok(instHtml.includes('tabindex="0"'), 'instructor filter tabs must have tabindex="0"');
+  assert.ok(instHtml.includes('aria-pressed="true"'), 'active instructor filter tab must have aria-pressed="true"');
+  assert.ok(instHtml.includes('aria-pressed="false"'), 'inactive instructor filter tabs must have aria-pressed="false"');
+  assert.ok(instHtml.includes("e.key === 'Enter' || e.key === ' '"), 'instructor tabs must handle Enter and Space keydown');
 });
