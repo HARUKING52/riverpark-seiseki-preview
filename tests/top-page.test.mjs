@@ -47,3 +47,31 @@ test('all local image src paths in index.html exist on disk and have non-empty a
     assert.ok(altMatch && altMatch[1].trim().length > 0, `Empty alt attribute on image: ${fullTag}`);
   }
 });
+
+test('Task 2: Top page includes Kids School in PROGRAM, official Instagram embeds, and dedicated subpage routing', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const css = fs.readFileSync(path.join(root, 'css/top.css'), 'utf8');
+
+  // Kids School in PROGRAM
+  assert.ok(html.includes('kids/kids-school/img/main.jpg'), 'PROGRAM section must reference kids/kids-school/img/main.jpg');
+  assert.ok(html.includes('alt="キッズスクール（ボルダリング・ダンス）"'), 'Kids School image must have descriptive alt');
+  assert.ok(html.includes('ボルダリングやダンスを通じて、お子様の挑戦する心と身体を育む'), 'Kids School must have poetic copy');
+  assert.ok(html.includes('キッズスクール'), 'PROGRAM section must include キッズスクール');
+  assert.ok(html.includes('href="kids/"'), 'PROGRAM section must link to kids/');
+  assert.ok(html.includes('すべてのプログラムを見る'), 'PROGRAM section must include CTA to all programs');
+
+  // Instagram embeds
+  assert.ok(html.includes('https://www.instagram.com/p/Dd84ReqzZLA/embed/'), 'INSTAGRAM section must embed 3rd anniversary reel Dd84ReqzZLA');
+  assert.ok(html.includes('https://www.instagram.com/p/DfMc6Rrz-Vk/embed/'), 'INSTAGRAM section must embed riverside yoga reel DfMc6Rrz-Vk');
+  assert.ok(html.includes('https://www.instagram.com/p/DfbtP2cqvpS/embed/'), 'INSTAGRAM section must embed kids bouldering reel DfbtP2cqvpS');
+
+  // Dedicated subpage routing links
+  for (const link of ['href="concept/"', 'href="lounge/"', 'href="program/"', 'href="instructor/"', 'href="plan/"', 'href="access/"']) {
+    assert.ok(html.includes(link), `index.html should link to dedicated subpage ${link}`);
+  }
+
+  // CSS classes
+  assert.ok(css.includes('five_col_circles') || css.includes('.service_list.five_col_circles'), 'top.css must style 5-circle grid');
+  assert.ok(css.includes('.insta_embed_row') || css.includes('.rp-insta-embed-grid'), 'top.css must style Instagram embed row/grid');
+});
+
