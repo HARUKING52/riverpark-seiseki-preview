@@ -176,13 +176,15 @@ header .sp_navi {
 	display:none;
 }
 
-header h1 { width: 149px;}
-header h1 img { width: 100%;}
+header h1,
+header .site_logo { width: 149px;}
+header h1 img,
+header .site_logo img { width: 100%;}
 
 header .inner .nav {
 	display: flex;
 	font-size: 12px;
-	width: 596px;
+	width: 610px;
 	justify-content: space-between;
 }
 header .inner .nav li a {
@@ -234,14 +236,16 @@ header .inner .head_contact a:hover {
 	}
 
 
-	header h1 { 
+	header h1,
+	header .site_logo { 
 		width: 38%;
 		height: auto;
 		position: relative;
  		 left: 9px;
 	
 	}
-	header h1 img { width: 100%;}
+	header h1 img,
+	header .site_logo img { width: 100%;}
 
 	header .inner .nav {
 		display: none;
@@ -668,7 +672,7 @@ header .inner .head_contact a:hover {
 ------------------------------------------------------------------------------------------------------------------------------------- */
 
 footer {
-	background: #333333;
+	background: #72bcd9;
 	color: #ffffff;
 	padding: 30px 5%;
 	text-align: center;
