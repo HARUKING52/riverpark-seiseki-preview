@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes">
+
+<link rel="shortcut icon" href="/common/img/favicon.ico">
+<link rel="icon" sizes="192x192" href="/common/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/common/img/favicon.png" type="image/png">
+
+<title>インストラクター紹介｜RIVER PARK 聖蹟桜ヶ丘 ヨガ/SUP/ボルダリング/アウトドアフィットネス/ワークラウンジ</title>
+<meta name="description" content="RIVER PARK 聖蹟桜ヶ丘のインストラクター紹介。ヨガ・ピラティス・TRX・SUP・ボルダリング・キッズスクールまで、一人ひとりの歩幅に優しく寄り添う個性豊かなインストラクターが在籍。初心者の方も安心してお越しください。"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../common/css/common.css">
+<link rel="stylesheet" href="../common/css/subpage-gentle.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../common/js/swiper-bundle.min.js"></script>
+<script src="../common/js/common.js"></script>
+
+<style>
+.inst_hero_media {
+  margin-top: 36px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.inst_hero_media img {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  display: block;
+}
+.inst_grid_4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px 20px;
+  margin-top: 20px;
+}
+.inst_card {
+  background: #ffffff;
+  border: 1px solid #edebeb;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 22px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.inst_card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+.inst_card_thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f5f5f5;
+  margin-bottom: 14px;
+}
+.inst_card_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.inst_card_cat {
+  font-size: 11px;
+  color: #72bcd9;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.inst_card_name {
+  font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 6px;
+}
+.inst_card_bio {
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.6;
+  padding: 0 12px;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+.inst_card_btn {
+  display: inline-block;
+  margin: 0 auto;
+  border: 1.5px solid #72bcd9;
+  border-radius: 20px;
+  padding: 5px 22px;
+  color: #72bcd9;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.inst_card_btn:hover {
+  background: #72bcd9;
+  color: #ffffff;
+}
+@media screen and (max-width: 960px) {
+  .inst_grid_4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 680px) {
+  .inst_grid_4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<div class="content">
+
+  <!-- Section 1: Hero & Statement -->
+  <section class="gentle_subpage_hero">
+    <h1>INSTRUCTORS<br><span>インストラクター紹介</span></h1>
+    <p class="lead">一人ひとりの歩幅に寄り添う、個性豊かなインストラクター。<br>
+      ポーズの完成度や激しさを競うのではなく、あなた自身の呼吸と心身の声に耳を澄ませる時間を温かくナビゲートします。<br>
+      運動が久しぶりの方も、初めての方も、安心して一歩を踏み出していただけます。</p>
+    <div class="inst_hero_media">
+      <img src="../img/top/facility_img1_1.jpg" alt="自然光あふれるスタジオでのインストラクターによるレッスン風景" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- Section 2: Category Filter Tabs -->
+  <section class="gentle_section" style="padding-bottom: 0;">
+    <div class="inner">
+      <h2>FILTER BY CATEGORY<br><span>担当カテゴリーから探す</span></h2>
+
+      <ul class="rp-filter-tabs">
+        <li class="rp-filter-tab is-active" data-filter="all">ALL（全員）</li>
+        <li class="rp-filter-tab" data-filter="studio">STUDIO（ヨガ・ピラティス・TRX）</li>
+        <li class="rp-filter-tab" data-filter="outdoor">OUTDOOR（ラン・ウォーク・SUP）</li>
+        <li class="rp-filter-tab" data-filter="bouldering">BOULDERING</li>
+        <li class="rp-filter-tab" data-filter="kids">KIDS SCHOOL</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 3: 31+ Instructors Portrait Grid -->
+  <section class="gentle_section" style="padding-top: 10px;">
+    <div class="inner">
+      <div class="inst_grid_4">
+
+        <!-- Studio Instructors -->
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_ai.jpg" alt="Ai先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Ai</h3>
+          <p class="inst_card_bio">アロマリラックスヨガ／天然精油の香りで心身を優しく緩める時間をお届けします。</p>
+          <a href="../studio/instructor/ai.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_aki.jpg" alt="Aki先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Aki</h3>
+          <p class="inst_card_bio">ベーシックヨガ／身体の隅々まで呼吸を行き渡らせ巡りを促します。</p>
+          <a href="../studio/instructor/aki.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_asha.jpg" alt="Asha先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Asha</h3>
+          <p class="inst_card_bio">ハタフロー／丁寧なストレッチから呼吸の流れを深めるクラス。</p>
+          <a href="../studio/instructor/asha.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio outdoor">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_ayumi.jpg" alt="Ayumi先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO &amp; OUTDOOR</span>
+          <h3 class="inst_card_name">Ayumi</h3>
+          <p class="inst_card_bio">パークヨガ・ハタフロー／多摩川の風と自然光を感じながら五感を開きます。</p>
+          <a href="../studio/instructor/ayumi.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_chisato.png" alt="CHISATO先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">CHISATO</h3>
+          <p class="inst_card_bio">フローヨガ／内なる熱とエネルギーを心地よく巡らせていきます。</p>
+          <a href="../studio/instructor/chisato.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_chizuko.jpg" alt="Chizuko先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Chizuko</h3>
+          <p class="inst_card_bio">セルフ整体＆ヨガ／タイ伝統療法ルーシーダットンで全身のバランス調整。</p>
+          <a href="../studio/instructor/chizuko.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_daisuke.jpg" alt="Daisuke先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Daisuke</h3>
+          <p class="inst_card_bio">ヴィンヤサヨガ／力強くしなやかな身体づくりと心地よい発汗。</p>
+          <a href="../studio/instructor/daisuke.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_kei.jpg" alt="KEI先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">KEI</h3>
+          <p class="inst_card_bio">リラックスヨガ／深い呼吸に合わせて日常の緊張をほどいていきます。</p>
+          <a href="../studio/instructor/kei.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_kiwa.jpg" alt="キワ先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">キワ</h3>
+          <p class="inst_card_bio">季節の養生ヨガ／四季の移ろいに合わせて心身の巡りを整えます。</p>
+          <a href="../studio/instructor/kiwa.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_kota.jpg" alt="KOTA先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">KOTA</h3>
+          <p class="inst_card_bio">ホリスティックフロー／関節と筋肉を統合して整えるアライメントヨガ。</p>
+          <a href="../studio/instructor/kota.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_maiko1.jpg" alt="MAIKO先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / PILATES</span>
+          <h3 class="inst_card_name">MAIKO</h3>
+          <p class="inst_card_bio">ピラティスアドバンス／コントロール性の高い動きでよりしなやかな身体へ。</p>
+          <a href="../studio/instructor/maiko1.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_maiko2.jpg" alt="Maiko先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / PILATES</span>
+          <h3 class="inst_card_name">Maiko</h3>
+          <p class="inst_card_bio">ピラティスベーシック／インナーマッスルを鍛え美しい姿勢へと導きます。</p>
+          <a href="../studio/instructor/maiko2.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_manami.jpg" alt="Manami先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Manami</h3>
+          <p class="inst_card_bio">ストレッチ＆ヨガ／身体がかたい方や初めての方も無理なく伸ばせます。</p>
+          <a href="../studio/instructor/manami.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_michiko.jpg" alt="MICHIKO先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">MICHIKO</h3>
+          <p class="inst_card_bio">ハタフロー／呼吸と動きをつなげて心身の余分な力みを解いていきます。</p>
+          <a href="../studio/instructor/michiko.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_nana_kosaka.jpg" alt="小坂奈々先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">小坂奈々</h3>
+          <p class="inst_card_bio">陰ヨガ／経絡や結合組織にじっくり働きかけ究極のリラックスへ。</p>
+          <a href="../studio/instructor/nana_kosaka.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_naoko.jpg" alt="Naoko先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Naoko</h3>
+          <p class="inst_card_bio">季節のアロマテラピーヨガ／植物の力とヨガで全身の不調を整えます。</p>
+          <a href="../studio/instructor/naoko.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_nozomi.jpg" alt="Nozomi先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Nozomi</h3>
+          <p class="inst_card_bio">ベーシックヨガ＆ブリージング／全身の巡りを促し自律神経を調整。</p>
+          <a href="../studio/instructor/nozomi.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_ogu.jpg" alt="おぐ先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / TRX</span>
+          <h3 class="inst_card_name">おぐ</h3>
+          <p class="inst_card_bio">TRXコンディショニング／サスペンションで関節に優しく体幹強化。</p>
+          <a href="../studio/instructor/ogu.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_sarry.jpg" alt="SARRY先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">SARRY</h3>
+          <p class="inst_card_bio">メディテーションヨガ／静かな自分の内側と対話する穏やかな時間。</p>
+          <a href="../studio/instructor/sarry.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_sohila.jpg" alt="空平先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">空平</h3>
+          <p class="inst_card_bio">リストラティブヨガ／補助具に身を委ねて深い休息と疲労回復を。</p>
+          <a href="../studio/instructor/sohila.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_tomomi_sakota.jpg" alt="Tomomi Sakota先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Tomomi Sakota</h3>
+          <p class="inst_card_bio">セルフケア＆ヨガ／ツボ押しや優しい動きで軽やかな身体感覚へ。</p>
+          <a href="../studio/instructor/tomomi_sakota.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio outdoor">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_toshiya.jpg" alt="Toshiya先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO &amp; OUTDOOR</span>
+          <h3 class="inst_card_name">Toshiya</h3>
+          <p class="inst_card_bio">TRX＆アウトドア／自分のペースで楽しく身体を動かすサポート。</p>
+          <a href="../studio/instructor/toshiya.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_tsugumi.jpg" alt="Tsugumi先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / PILATES</span>
+          <h3 class="inst_card_name">Tsugumi</h3>
+          <p class="inst_card_bio">リラインピラティス／日常のクセをリセットし理想のボディラインへ。</p>
+          <a href="../studio/instructor/tsugumi.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_wakana.jpg" alt="Wakana先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Wakana</h3>
+          <p class="inst_card_bio">アライメントヨガ／基本のポーズで骨盤や足の位置を正しく整えます。</p>
+          <a href="../studio/instructor/wakana.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_yoppi.jpg" alt="よっぴ先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">よっぴ</h3>
+          <p class="inst_card_bio">エナジーフローヨガ／滞りを流してむくみや疲れをスッキリ解消。</p>
+          <a href="../studio/instructor/yoppi.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio outdoor">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_yoshiko.jpg" alt="Yoshiko先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO &amp; OUTDOOR</span>
+          <h3 class="inst_card_name">Yoshiko</h3>
+          <p class="inst_card_bio">リラックスヨガ＆外ヨガ／心と体を優しく解き放つご自愛レッスン。</p>
+          <a href="../studio/instructor/yoshiko.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_yuhei.jpg" alt="YUHEI先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / TRX</span>
+          <h3 class="inst_card_name">YUHEI</h3>
+          <p class="inst_card_bio">TRXワークアウト／体幹の脱力・腰痛改善コンディショニングを丁寧に指導。</p>
+          <a href="../studio/instructor/yuhei.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_yukiko.jpg" alt="Yukiko先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">Yukiko</h3>
+          <p class="inst_card_bio">ハタヨガ＆ストレッチ／身体の心地よさを味わいながら丁寧に動きます。</p>
+          <a href="../studio/instructor/yukiko.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="studio">
+          <div class="inst_card_thumb">
+            <img src="../studio/img/inst_yumiko.jpg" alt="yumiko先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">STUDIO / YOGA</span>
+          <h3 class="inst_card_name">yumiko</h3>
+          <p class="inst_card_bio">ベーシックヴィンヤサ／太陽礼拝で冷えをほぐしあたたかな身体へ。</p>
+          <a href="../studio/instructor/yumiko.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <!-- Outdoor Dedicated Instructors -->
+        <div class="inst_card inst-card-item" data-category="outdoor">
+          <div class="inst_card_thumb">
+            <img src="../outdoorfitness-program/img/inst_cannon.jpg" alt="キャノン先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">OUTDOOR / RUN &amp; WALK</span>
+          <h3 class="inst_card_name">キャノン</h3>
+          <p class="inst_card_bio">WALK &amp; RUN／誰でも気軽に参加できる土曜朝の爽やかグループラン。</p>
+          <a href="../outdoorfitness-program/instructor/cannon.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="outdoor">
+          <div class="inst_card_thumb">
+            <img src="../outdoorfitness-program/img/inst_nico.jpg" alt="NICO先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">OUTDOOR / NORDIC</span>
+          <h3 class="inst_card_name">NICO</h3>
+          <p class="inst_card_bio">ノルディックウォーキング／ポールを使って多摩川の自然を歩く全身運動。</p>
+          <a href="../outdoorfitness-program/instructor/nico.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <!-- Bouldering Instructors -->
+        <div class="inst_card inst-card-item" data-category="bouldering kids">
+          <div class="inst_card_thumb">
+            <img src="../bouldering/img/inst_asari.jpg" alt="あさり先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">BOULDERING &amp; KIDS</span>
+          <h3 class="inst_card_name">あさり</h3>
+          <p class="inst_card_bio">ボルダリング基礎／ルールや登り方のコツを優しく丁寧にレクチャー。</p>
+          <a href="../bouldering/instructor/asari.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="bouldering">
+          <div class="inst_card_thumb">
+            <img src="../bouldering/img/inst_noimage.jpg" alt="吉田耕輔先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">BOULDERING</span>
+          <h3 class="inst_card_name">吉田耕輔</h3>
+          <p class="inst_card_bio">ボルダリング初級／ステップアップを目指す方のムーブやルート攻略法。</p>
+          <a href="../bouldering/instructor/kosuke_yoshida.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <div class="inst_card inst-card-item" data-category="bouldering kids">
+          <div class="inst_card_thumb">
+            <img src="../bouldering/img/inst_yohei_yanai.jpg" alt="箭内 洋平先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">BOULDERING &amp; KIDS</span>
+          <h3 class="inst_card_name">箭内 洋平</h3>
+          <p class="inst_card_bio">ボルダリング／課題クリアの喜びを分かち合い、挑戦する勇気を応援します。</p>
+          <a href="../bouldering/instructor/yohei_yanai.html" class="inst_card_btn">Profile</a>
+        </div>
+
+        <!-- Kids Dedicated Instructor -->
+        <div class="inst_card inst-card-item" data-category="kids">
+          <div class="inst_card_thumb">
+            <img src="../kids/img/inst_ueno.jpg" alt="ueno先生" loading="lazy">
+          </div>
+          <span class="inst_card_cat">KIDS / DANCE</span>
+          <h3 class="inst_card_name">ueno</h3>
+          <p class="inst_card_bio">キッズダンス／リズム感・集中力・仲間への思いやりを楽しく育みます。</p>
+          <a href="../kids/instructor/ueno.html" class="inst_card_btn">Profile</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: 6 Instagram Embeds -->
+  <section class="gentle_section bg_soft">
+    <div class="inner">
+      <h2>INSTRUCTOR VOICES &amp; INSTAGRAM<br><span>インストラクターのリール動画・メッセージ</span></h2>
+      <p style="font-size:14.5px; color:#555555; line-height:2.0em; margin-bottom:32px;">
+        インストラクターによる実際のレッスン風景や、日々の心身のセルフケアに関する動画・投稿をピックアップしました。
+      </p>
+
+      <div class="rp-insta-embed-grid">
+        <div class="rp-insta-card">
+          <iframe class="rp-insta-iframe" src="https://www.instagram.com/p/DfMc6Rrz-Vk/embed/" title="Ayumi先生 多摩川リバーサイド外ヨガ風景" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="rp-insta-card">
+          <iframe class="rp-insta-iframe" src="https://www.instagram.com/p/Dd08Gi7j87v/embed/" title="Maiko先生 スタジオピラティス風景" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="rp-insta-card">
+          <iframe class="rp-insta-iframe" src="https://www.instagram.com/p/DPYKWpGj43S/embed/" title="KOTA先生 ホリスティックフローヨガ" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="rp-insta-card">
+          <iframe class="rp-insta-iframe" src="https://www.instagram.com/p/DfRS_kRTgRJ/embed/" title="小坂奈々先生 陰ヨガ解説" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="rp-insta-card">
+          <iframe class="rp-insta-iframe" src="https://www.instagram.com/p/DewIw-RRlBJ/embed/" title="YUHEI先生 体幹コンディショニング" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="rp-insta-card">
+          <iframe class="rp-insta-iframe" src="https://www.instagram.com/p/DfLggS8zieT/embed/" title="NICO先生 ノルディックウォーキング風景" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Trial Reservation CTA -->
+  <section class="gentle_section">
+    <div class="inner" style="text-align: center;">
+      <h2>FIRST STEP<br><span>まずは体験レッスンから</span></h2>
+      <p style="font-size:14.5px; color:#555555; line-height:2.0em; max-width:680px; margin:0 auto 28px;">
+        どのインストラクターも、初心者の方を笑顔で温かくお迎えします。<br>
+        持ち物は動きやすい服装とお飲み物だけ。まずは心地よい空間を体験しにいらしてください。
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="../first-time/" class="gentle_pill_btn">初めての方へのご案内</a>
+        <a href="https://rsvprime.nas-club.co.jp/members/NR020?queryParam=%7B%22mode%22%3A2,%22tenpo%22%3A140%7D&digest=79fe70ca810b3d45ebcc2c8f008747675a0879f44958efb06393c6001b4660ae" target="_blank" rel="noopener" class="rp-reserve-btn">体験レッスンのご予約はこちら</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /content -->
+
+<div id="footer-container"></div>
+
+<script>
+$(function() {
+  $('.rp-filter-tab').on('click', function() {
+    $('.rp-filter-tab').removeClass('is-active');
+    $(this).addClass('is-active');
+    var filter = $(this).data('filter');
+    if (filter === 'all') {
+      $('.inst-card-item').fadeIn(200);
+    } else {
+      $('.inst-card-item').each(function() {
+        var cats = ($(this).data('category') || '').split(' ');
+        if (cats.indexOf(filter) !== -1) {
+          $(this).fadeIn(200);
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
