@@ -8,8 +8,8 @@
 <link rel="icon" sizes="192x192" href="/common/img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/common/img/favicon.png" type="image/png">
 
-<title>会員制ワークラウンジ＆ランステ｜RIVER PARK 聖蹟桜ヶ丘</title>
-<meta name="description" content="多摩川の自然に囲まれたRIVER PARK 聖蹟桜ヶ丘の2F会員制ワークラウンジと、ロッカー＆シャワールーム（ランニングステーション）、河川敷レジャーグッズレンタルのご案内。"/>
+<title>会員制ワークラウンジ＆施設フロア｜RIVER PARK 聖蹟桜ヶ丘 ヨガ/SUP/ボルダリング/アウトドアフィットネス/ワークラウンジ</title>
+<meta name="description" content="多摩川の自然に囲まれたRIVER PARK 聖蹟桜ヶ丘の2F会員制ワークラウンジ、ヨガスタジオ、1Fボルダリングジム、SUP艇庫、清潔なロッカー＆シャワールーム（ランステ利用可）、フロアマップのご案内。"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -21,55 +21,271 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../common/js/swiper-bundle.min.js"></script>
 <script src="../common/js/common.js"></script>
+
+<style>
+.floor_map_pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 36px;
+}
+.floor_map_card {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+.floor_map_img {
+  background: #fafafa;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.floor_map_img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.floor_map_body {
+  padding: 24px 22px;
+  flex-grow: 1;
+}
+.floor_map_badge {
+  font-size: 11px;
+  color: #72bcd9;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.floor_map_title {
+  font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.floor_map_desc {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.85;
+}
+@media screen and (max-width: 768px) {
+  .floor_map_pair {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+</style>
 </head>
 <body>
 
 <div id="header-container"></div>
 
 <div class="content">
+
+  <!-- Section 1: Hero & Lead -->
   <section class="gentle_subpage_hero">
-    <h1>WORK LOUNGE &amp; SHOWER<br><span>会員制ワークラウンジ＆ランステ</span></h1>
-    <p class="lead">川を眺めながら、静かに自分と向き合う時間。<br>
+    <h1>WORK LOUNGE &amp; FACILITY<br><span>会員制ワークラウンジ＆施設フロア</span></h1>
+    <p class="lead">多摩川を望む特等席で、働く・くつろぐ・整える。<br>
+      川を眺めながら、静かに自分と向き合う時間。<br>
       東京のオアシス・多摩川の自然に囲まれた居心地の良い空間で、心も身体も満たされるWell-beingな日常をお過ごしいただけます。</p>
   </section>
 
+  <!-- Section 2: FACILITY & FLOOR 6-Area 3-Column Photo Grid (.rp-grid-3) -->
   <section class="gentle_section bg_soft">
     <div class="inner">
-      <h2>SPACE GUIDE<br><span>ラウンジ・設備のご案内</span></h2>
+      <h2>FACILITY &amp; FLOOR<br><span>施設フロア・全6エリアのご案内</span></h2>
 
-      <div class="editorial_pair">
-        <div class="photo_col">
-          <img src="../img/top/facility_img2_3.jpg" alt="多摩川を一望する2F会員制ワークラウンジ" fetchpriority="high">
+      <div class="rp-grid-3">
+        <!-- 1. 2F ヨガスタジオ（約100㎡） -->
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img2_1.jpg" alt="2F ヨガスタジオ（約100㎡）" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">STUDIO (2F)</span>
+          <h3 class="rp-card-3__title">2F ヨガスタジオ（約100㎡）</h3>
+          <p class="rp-card-3__desc">多摩川と広大な空を一望する約100㎡の自然光スタジオ。足裏に心地よい天然無垢材のフローリングと、川風を感じるパノラマビューの中でヨガやピラティスを深めます。</p>
         </div>
-        <div class="text_col">
-          <h3>2F 会員制ワークラウンジ</h3>
-          <p>フリーパス会員様がいつでも無制限でご利用いただけるワークラウンジです。窓の向こうに広がる多摩川の景色を眺めながら、テレワークや読書、レッスンの前後のひとときをゆったりとお過ごしいただけます。オンライン会議用のブース席もご用意しています。</p>
-          <a href="../#plan" class="gentle_pill_btn">フリーパス会員プランを見る</a>
-        </div>
-      </div>
 
-      <div class="editorial_pair">
-        <div class="photo_col">
-          <img src="../img/top/facility_img2_6.jpg" alt="清潔なロッカー＆パウダールームとシャワー設備" loading="lazy">
+        <!-- 2. 2F 会員制ワークラウンジ -->
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img2_3.jpg" alt="2F 会員制ワークラウンジ" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">WORK LOUNGE (2F)</span>
+          <h3 class="rp-card-3__title">2F 会員制ワークラウンジ</h3>
+          <p class="rp-card-3__desc">フリーパス会員様がいつでも無制限でご利用いただけるワークラウンジ。高速Wi-Fi、全席電源、オンライン通話ブースを完備し、テレワークや読書に最適な環境です。</p>
         </div>
-        <div class="text_col">
-          <h3>ロッカー＆シャワー・パウダールーム（ランステ利用可）</h3>
-          <p>ドロップイン利用（1回770円／フリーパス会員は無制限）も可能なロッカー＆シャワールームです。多摩川河川敷でのランニング・ウォーキングの拠点（ランステ）としてはもちろん、1階エリアはリバーSUP後の屋外からの直接アクセスにも対応しています。</p>
-        </div>
-      </div>
 
-      <div class="editorial_pair">
-        <div class="photo_col">
-          <img src="../img/top/facility_img1_1.jpg" alt="多摩川河川敷せいせきカワマチに面したクラブハウス" loading="lazy">
+        <!-- 3. 1F ボルダリングジム -->
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img1_3.jpg" alt="1F ボルダリングジム" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">BOULDERING (1F)</span>
+          <h3 class="rp-card-3__title">1F ボルダリングジム</h3>
+          <p class="rp-card-3__desc">高さ3.5m〜4mのボルダリングウォールに約100ルートを設置。未経験者や子どもから大人までパズル感覚で身体を動かせます。シューズ・チョークレンタル完備。</p>
         </div>
-        <div class="text_col">
-          <h3>河川敷（せいせきカワマチ）レジャーグッズレンタル</h3>
-          <p>1階フロントでは、多摩川河川敷（せいせきカワマチ）の芝生広場でお使いいただけるアウトドアチェア、テーブル、レジャーシート、モルックなどのレンタルも行っております。晴れた日のピクニックや外気浴にぜひご活用ください。</p>
+
+        <!-- 4. ロッカー＆シャワールーム -->
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img1_5.jpg" alt="ロッカー＆シャワールーム" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">SHOWER &amp; LOCKER (1F/2F)</span>
+          <h3 class="rp-card-3__title">ロッカー＆シャワールーム</h3>
+          <p class="rp-card-3__desc">男女別の清潔なシャワールーム、鍵付きロッカー、パウダールーム、ドライヤーを完備。1階は屋外直結動線となっており、リバーSUPや多摩川ランステとしても利用可能です。</p>
+        </div>
+
+        <!-- 5. 1F SUP艇庫（多摩川直結） -->
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img1_6.jpg" alt="1F SUP艇庫（多摩川直結）" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">SUP BOAT HOUSE (1F)</span>
+          <h3 class="rp-card-3__title">1F SUP艇庫（多摩川直結）</h3>
+          <p class="rp-card-3__desc">目の前の多摩川水辺へそのまま出艇できる専用SUP艇庫。高品質なSUPボード、パドル、ライフジャケットを常備し、インストラクターのサポートのもと安全に水上へ漕ぎ出せます。</p>
+        </div>
+
+        <!-- 6. クラブハウス・レンタル対応 -->
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img1_1.jpg" alt="クラブハウス・レンタル対応" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">CLUBHOUSE &amp; RENTAL</span>
+          <h3 class="rp-card-3__title">クラブハウス・レンタル対応</h3>
+          <p class="rp-card-3__desc">せいせきカワマチに面したサクテラスモール1F・2Fのクラブハウス。河川敷レジャーグッズの貸出や、イベント・撮影・研修などのスタジオ貸切レンタルに対応しています。</p>
         </div>
       </div>
     </div>
   </section>
-</div>
+
+  <!-- Section 3: 1F / 2F Floor Maps & Architectural Design -->
+  <section class="gentle_section">
+    <div class="inner">
+      <h2>FLOOR MAP &amp; ARCHITECTURE<br><span>1F・2F フロアマップと空間設計のこだわり</span></h2>
+      <p style="font-size:14.5px; color:#555555; line-height:2.0em;">
+        多摩川の豊かな自然景観と建物の機能美がシームレスに溶け合う空間デザイン。<br>
+        1階のアウトドアフィールド直結フロアから、2階の光あふれるリトリート＆ワークフロアまで、計算された心地よい動線が広がります。
+      </p>
+
+      <div class="floor_map_pair">
+        <div class="floor_map_card">
+          <div class="floor_map_img">
+            <img src="../img/top/img_1f.jpg" alt="RIVER PARK 聖蹟桜ヶ丘 1F フロアマップ" loading="lazy">
+          </div>
+          <div class="floor_map_body">
+            <div class="floor_map_badge">1F ACTIVE &amp; OUTDOOR FLOOR</div>
+            <h3 class="floor_map_title">1F：多摩川へ直結するアクティブフロア</h3>
+            <p class="floor_map_desc">吹き抜けが開放的なボルダリングジム、多摩川水辺へ直接アクセスできるSUP艇庫、そして屋外から直接入室できる更衣室・シャワールーム（シャワー）を配置。泥や水滴を気にせず利用できる動線で、多摩川のアウトドアアクティビティを日常に引き寄せます。</p>
+          </div>
+        </div>
+
+        <div class="floor_map_card">
+          <div class="floor_map_img">
+            <img src="../img/top/img_2f.jpg" alt="RIVER PARK 聖蹟桜ヶ丘 2F フロアマップ" loading="lazy">
+          </div>
+          <div class="floor_map_body">
+            <div class="floor_map_badge">2F RETREAT &amp; WORK FLOOR</div>
+            <h3 class="floor_map_title">2F：光と風に包まれるリトリートフロア</h3>
+            <p class="floor_map_desc">約100㎡の広々としたヨガ・ピラティススタジオと、多摩川の広大なパノラマビューを望む会員制ワークラウンジ。天然無垢材の床と全面ガラス窓から注ぐ柔らかな自然光が、心身を深いリラクゼーションと創造的な集中へと導きます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Work Lounge 3 Comfort Features (.rp-grid-3) -->
+  <section class="gentle_section bg_soft">
+    <div class="inner">
+      <h2>WORK LOUNGE FEATURES<br><span>会員制ワークラウンジの3つの快適環境</span></h2>
+
+      <div class="rp-grid-3">
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img2_4.jpg" alt="高速Wi-Fi＆全席電源完備" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">CONNECTIVITY</span>
+          <h3 class="rp-card-3__title">高速Wi-Fi＆全席電源完備</h3>
+          <p class="rp-card-3__desc">安定した高速Wi-Fiネットワークと、各席に配備されたコンセント・USB充電口を完備。大容量のファイル送受信や動画視聴、長時間のテレワークもストレスなくスムーズに行えます。</p>
+        </div>
+
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img2_5.jpg" alt="オンライン会議対応スペース" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">CONFERENCE READY</span>
+          <h3 class="rp-card-3__title">オンライン会議・通話対応ブース</h3>
+          <p class="rp-card-3__desc">イヤホン着用でのWebミーティングや音声通話が可能なスペースを設置。周囲への配慮とプライバシーを両立し、急なオンライン打ち合わせにも安心して参加いただけます。</p>
+        </div>
+
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img2_3.jpg" alt="多摩川ビューのパノラマカウンター席" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">RIVERSIDE VIEW</span>
+          <h3 class="rp-card-3__title">多摩川ビューのパノラマカウンター席</h3>
+          <p class="rp-card-3__desc">窓の外に広がる多摩川の水面や川辺の木々を眺めながら過ごせる特等席。適度な自然の借景が目の疲れを癒やし、思考を整理するための最高の環境を提供します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Cafe & Original Protein Bar + Shower Room & Amenities -->
+  <section class="gentle_section">
+    <div class="inner">
+      <h2>CAFE &amp; SHOWER AMENITIES<br><span>カフェ＆清潔なシャワー・アメニティ設備</span></h2>
+
+      <div class="editorial_pair">
+        <div class="photo_col">
+          <img src="../img/top/insta_gallery_coffee.jpg" alt="こだわりのハンドドリップコーヒーとオリジナルプロテイン" loading="lazy">
+        </div>
+        <div class="text_col">
+          <h3>仕事の合間や運動後に寄り添うカフェメニュー</h3>
+          <p>2階ラウンジでは、香り高い豆を丁寧に抽出するハンドドリップコーヒーや身体に優しいハーブティーをご用意。また、運動後の素早い栄養補給やコンディショニングに最適な、無添加のオリジナルプロテインスムージーもお楽しみいただけます。</p>
+          <p>多摩川の景色を眺めながら、ホッと一息つく贅沢なブレイクタイムをお過ごしください。</p>
+        </div>
+      </div>
+
+      <div class="editorial_pair" style="margin-top:60px;">
+        <div class="photo_col">
+          <img src="../img/top/facility_img2_6.jpg" alt="清潔なロッカー＆シャワールームとパウダールーム" loading="lazy">
+        </div>
+        <div class="text_col">
+          <h3>清潔なロッカー＆シャワールーム（ランステ利用可）</h3>
+          <p>男女別の清潔なシャワールーム（シャワー）、ダイヤル式鍵付きロッカー、パウダールーム、大風量ドライヤーを完備。フリーパス会員様は何度でも無料でご利用いただけます。</p>
+          <p>都度利用（1回770円）によるシャワー＆ロッカーのみの利用にも対応しており、多摩川河川敷でのランニングやサイクリング、ウォーキングのランステ拠点としても多くの方に愛用されています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Studio & Space Rental Guide linking to ../rentalservice/ -->
+  <section class="gentle_section bg_soft">
+    <div class="inner">
+      <h2>STUDIO &amp; SPACE RENTAL<br><span>スタジオ＆ラウンジ レンタルサービス</span></h2>
+
+      <div class="editorial_pair">
+        <div class="photo_col">
+          <img src="../img/top/rental_bg.jpg" alt="多摩川を一望するスタジオ＆ラウンジの貸切レンタル" loading="lazy">
+        </div>
+        <div class="text_col">
+          <h3>多摩川を一望する約100㎡の開放的な空間を貸切で</h3>
+          <p>RIVER PARK 聖蹟桜ヶ丘の2Fスタジオおよびワークラウンジは、営業時間外や特別枠にて法人研修、ヨガ・ピラティスワークショップ、健康セミナー、スチール写真撮影、TV・CM・Web動画ロケーション撮影などのレンタル利用を承っております。</p>
+          <p>高品質な音響設備、ヨガプロップス、大型プロジェクターなどのオプションも充実。自然光が美しく差し込む水辺の特別なロケーションで、思い通りのイベントを実現いただけます。</p>
+          <a href="../rentalservice/" class="gentle_pill_btn">レンタルサービスの詳細・料金を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /content -->
 
 <div id="footer-container"></div>
 

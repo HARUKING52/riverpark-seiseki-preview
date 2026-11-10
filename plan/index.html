@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes">
+
+<link rel="shortcut icon" href="/common/img/favicon.ico">
+<link rel="icon" sizes="192x192" href="/common/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/common/img/favicon.png" type="image/png">
+
+<title>料金プラン・会員システム｜RIVER PARK 聖蹟桜ヶ丘 ヨガ/SUP/ボルダリング/アウトドアフィットネス/ワークラウンジ</title>
+<meta name="description" content="RIVER PARK 聖蹟桜ヶ丘の料金プラン。通い放題のフリーパス会員（月額 13,612円税込）からドロップイン都度利用（3,850円税込）、ボルダリング（1,980円税込）、キッズスクール（月額 7,480円税込〜）まで、ライフスタイルに合わせて選べます。"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../common/css/common.css">
+<link rel="stylesheet" href="../common/css/subpage-gentle.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../common/js/swiper-bundle.min.js"></script>
+<script src="../common/js/common.js"></script>
+
+<style>
+.rp-plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  margin-top: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+.rp-plan-table th, .rp-plan-table td {
+  padding: 18px 22px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+.rp-plan-table thead th {
+  background: #f4f9fb;
+  color: #222222;
+  font-weight: 600;
+  border-bottom: 2px solid #72bcd9;
+  font-size: 15px;
+}
+.rp-plan-table tbody th {
+  font-weight: 600;
+  color: #222222;
+  background: #fafafa;
+  width: 26%;
+  border-right: 1px solid #ebebeb;
+}
+.rp-plan-table tbody tr:hover {
+  background: #fdfefe;
+}
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 35px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+}
+.table-wrapper:focus {
+  outline: 2px solid #72bcd9;
+  outline-offset: 2px;
+}
+.price_highlight {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222222;
+}
+.small_txt {
+  font-size: 12px;
+  color: #666666;
+  font-weight: normal;
+}
+.enroll_step_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px 0 40px;
+}
+.enroll_step_card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 4px;
+  border-top: 2px solid #72bcd9;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+.enroll_step_num {
+  font-size: 12px;
+  color: #72bcd9;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.enroll_step_title {
+  font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.enroll_step_desc {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.85;
+}
+.plan_cta_actions {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .enroll_step_grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<div class="content">
+
+  <!-- Section 1: Hero & Lead -->
+  <section class="gentle_subpage_hero">
+    <h1>PLAN &amp; PRICE<br><span>料金プラン・会員システム</span></h1>
+    <p class="lead">あなたの暮らしのリズムに合わせて選べる、シンプルな料金プラン。<br>
+      すべてのプログラムとラウンジを日常の一部にできる「フリーパス会員」から、ご都合に合わせて気軽に参加できる「ドロップイン（都度利用）」まで、無理のないスタイルをお選びいただけます。</p>
+  </section>
+
+  <!-- Section 2: Main Plan Comparison Table & Free Pass Perks in .rp-grid-3 -->
+  <section class="gentle_section bg_soft">
+    <div class="inner">
+      <h2 id="main-plan-heading">MAIN PLANS<br><span>基本料金プラン比較</span></h2>
+      <p style="font-size:14.5px; color:#555555; line-height:2.0em; margin-bottom:20px;">
+        入会金・年会費は不要。習慣的に通いたい方向けの定額フリーパスと、気軽に参加できる都度利用の2通りをご用意しています。
+      </p>
+
+      <div tabindex="0" role="region" aria-labelledby="main-plan-heading" class="table-wrapper">
+        <table class="rp-plan-table">
+          <thead>
+            <tr>
+              <th scope="col">プラン項目</th>
+              <th scope="col">ドロップイン（都度利用）</th>
+              <th scope="col">フリーパス会員</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">料金</th>
+              <td><span class="price_highlight">3,850円</span> / 回<span class="small_txt">（税込）</span></td>
+              <td><span class="price_highlight">月額 13,612円</span><span class="small_txt">（税込）</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="../studio/">ヨガ・ピラティス</a></th>
+              <td>都度参加（3,850円 / 回）</td>
+              <td>受け放題（無制限）</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="../bouldering/">ボルダリング</a></th>
+              <td><span class="price_highlight">1,980円</span> / 回<span class="small_txt">（学生1,650円・未就学児748円）</span></td>
+              <td>無制限利用OK</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="../outdoorfitness-program/">多摩川SUP・アウトドア</a></th>
+              <td>3,850円 / 回<span class="small_txt">（税込）</span></td>
+              <td>無制限利用OK</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="../lounge/">ワークラウンジ＆シャワー</a></th>
+              <td>シャワー 770円<span class="small_txt">（ラウンジは会員限定）</span></td>
+              <td>利用OK（無制限）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:19px; color:#222222; margin: 40px 0 20px; font-weight:600;">フリーパス会員の3大特典</h3>
+      <div class="rp-grid-3">
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/free_pass_img1.jpg" alt="全プログラム受け放題" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">UNLIMITED LESSONS</span>
+          <h3 class="rp-card-3__title">全プログラム受け放題</h3>
+          <p class="rp-card-3__desc">2Fスタジオでのヨガ・ピラティス、リバーサイドヨガ、多摩川SUP、ノルディックウォーキングなど多彩なクラスを月何回でも受講可能です。</p>
+        </div>
+
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/free_pass_img3.jpg" alt="2F 会員制ラウンジ使い放題" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">WORK LOUNGE ACCESS</span>
+          <h3 class="rp-card-3__title">2F 会員制ラウンジ使い放題</h3>
+          <p class="rp-card-3__desc">多摩川を一望する会員専用ラウンジを無制限でご利用可能。高速Wi-Fiと全席電源を完備し、テレワークや読書のリトリート空間として毎日でもお使いいただけます。</p>
+        </div>
+
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/free_pass_img2.jpg" alt="ボルダリング＆シャワー無制限" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">GYM &amp; SHOWER</span>
+          <h3 class="rp-card-3__title">ボルダリング＆シャワー無制限</h3>
+          <p class="rp-card-3__desc">1Fボルダリングジムの自由利用に加え、男女別シャワールーム・鍵付きロッカーもいつでも使い放題。多摩川ランニングの拠点（ランステ）としても活躍します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Kids School Pricing (7,480円) -->
+  <section class="gentle_section">
+    <div class="inner">
+      <h2>KIDS SCHOOL PLAN<br><span>キッズスクール料金案内</span></h2>
+
+      <div class="editorial_pair">
+        <div class="photo_col">
+          <img src="../img/top/service_img4.jpg" alt="キッズスクールのレッスン風景" loading="lazy">
+        </div>
+        <div class="text_col">
+          <h3>お子様の挑戦する心としなやかな身体を育むスクール</h3>
+          <p style="font-size:20px; color:#72bcd9; font-weight:700; margin-bottom:12px;">月額 7,480円<span class="small_txt">（税込）〜</span></p>
+          <p>RIVER PARK 聖蹟桜ヶ丘では、放課後のお子様を対象とした「キッズボルダリングスクール」と「キッズフリースタイルダンス」を開講しています。</p>
+          <ul style="font-size:13.5px; color:#444444; line-height:2.0em; margin-bottom:20px; padding-left:18px;">
+            <li><strong>キッズボルダリングスクール：</strong> 月額 7,480円（税込）／週1回（月4回）・専用シューズ＆チョークレンタル無料</li>
+            <li><strong>キッズフリースタイルダンス：</strong> 月額 7,480円（税込）／週1回（月4回）・多摩川の自然の中でリズム感を養う</li>
+            <li><strong>体験レッスン：</strong> 1回 1,100円（税込）にて随時受付中</li>
+          </ul>
+          <a href="../kids/" class="gentle_pill_btn">キッズスクールの詳細を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: 3 Lifestyle Model Cases in .rp-grid-3 -->
+  <section class="gentle_section bg_soft">
+    <div class="inner">
+      <h2>LIFESTYLE MODEL CASES<br><span>ライフスタイル別・通い方シミュレーション</span></h2>
+
+      <div class="rp-grid-3">
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img2_1.jpg" alt="通い方モデルケース1：平日夜ヨガ＋週末朝ラン" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">CASE 01 ｜ WORK &amp; WELL-BEING</span>
+          <h3 class="rp-card-3__title">週2回利用（平日夜ヨガ＋週末朝ラン＆ラウンジ）</h3>
+          <p class="rp-card-3__desc">平日夜は仕事帰りにヨガで心身をリセット、休日は朝のランニング後にラウンジで読書。月8回のペースで通えば1回あたり約1,700円！日常のリズムを整える最も人気の通い方です。</p>
+        </div>
+
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/facility_img2_3.jpg" alt="通い方モデルケース2：テレワーク中心のデイタイム利用" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">CASE 02 ｜ REMOTE WORKER</span>
+          <h3 class="rp-card-3__title">リモートワーク中心のデイタイム利用</h3>
+          <p class="rp-card-3__desc">自宅近くの集中オフィスとして2Fラウンジを活用。午前中に集中して仕事を進め、ランチタイムや夕方にスタジオでピラティス。シャワーでさっぱりして帰宅できる健康的なワークスタイルです。</p>
+        </div>
+
+        <div class="rp-card-3">
+          <div class="rp-card-3__media">
+            <img src="../img/top/service_img3.jpg" alt="通い方モデルケース3：予定に合わせて気軽に参加するドロップイン" loading="lazy">
+          </div>
+          <span class="rp-card-3__meta">CASE 03 ｜ WEEKEND VISITOR</span>
+          <h3 class="rp-card-3__title">予定に合わせて気軽に参加するドロップイン</h3>
+          <p class="rp-card-3__desc">週末の晴れた日に多摩川SUPや外ヨガに参加したり、雨の日にボルダリングで汗を流したり。入会金不要で1回（3,850円）から参加できるため、気軽な気分転換に最適です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Rental Items & Options Table -->
+  <section class="gentle_section">
+    <div class="inner">
+      <h2 id="rental-table-heading">RENTAL &amp; OPTIONS<br><span>手ぶらで通えるレンタル備品・オプション</span></h2>
+      <p style="font-size:14.5px; color:#555555; line-height:2.0em; margin-bottom:20px;">
+        お仕事帰りやお出かけついでにも手ぶらでお越しいただけるよう、豊富なレンタルアイテムをご用意しています。
+      </p>
+
+      <div tabindex="0" role="region" aria-labelledby="rental-table-heading" class="table-wrapper">
+        <table class="rp-plan-table">
+          <thead>
+            <tr>
+              <th scope="col">アイテム・サービス</th>
+              <th scope="col">対象・条件</th>
+              <th scope="col">料金（税込）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">ヨガマット・ブロック・ボルスター</th>
+              <td>スタジオプログラム参加者</td>
+              <td>無料（常備完備）</td>
+            </tr>
+            <tr>
+              <th scope="row">クライミングシューズ＆チョーク</th>
+              <td>ボルダリングプログラム参加者</td>
+              <td>無料（一般ジム利用時は330円）</td>
+            </tr>
+            <tr>
+              <th scope="row">SUPボード・パドル・ライフジャケット</th>
+              <td>SUPプログラム参加者</td>
+              <td>無料（プログラム料金に含む）</td>
+            </tr>
+            <tr>
+              <th scope="row">レンタルタオルセット（バスタオル＋フェイスタオル）</th>
+              <td>シャワー・プログラムご利用者</td>
+              <td>330円 / 回</td>
+            </tr>
+            <tr>
+              <th scope="row">河川敷レジャーグッズ（チェア・モルック等）</th>
+              <td>せいせきカワマチ利用者</td>
+              <td>550円〜 / 回</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Enrollment Flow & FAQ linking to NAS reservation -->
+  <section class="gentle_section bg_soft">
+    <div class="inner">
+      <h2>ENROLLMENT &amp; FAQ<br><span>ご入会の流れ・よくあるご質問</span></h2>
+
+      <div class="enroll_step_grid">
+        <div class="enroll_step_card">
+          <div class="enroll_step_num">STEP 01</div>
+          <h3 class="enroll_step_title">Webからオンライン入会手続き</h3>
+          <p class="enroll_step_desc">Web入会ページより会員情報とクレジットカードをご登録いただきます。24時間いつでも簡単にお手続きいただけます。</p>
+        </div>
+
+        <div class="enroll_step_card">
+          <div class="enroll_step_num">STEP 02</div>
+          <h3 class="enroll_step_title">ご来館・会員証発行</h3>
+          <p class="enroll_step_desc">ご来館時に1階フロントにて会員証（アプリまたはカード）を発行し、施設利用オリエンテーションを行います。</p>
+        </div>
+
+        <div class="enroll_step_card">
+          <div class="enroll_step_num">STEP 03</div>
+          <h3 class="enroll_step_title">その日から全施設使い放題！</h3>
+          <p class="enroll_step_desc">入会手続き完了後、その日すぐに2Fスタジオ・ラウンジ・1Fボルダリングジム・シャワーをご利用いただけます。</p>
+        </div>
+      </div>
+
+      <div class="gentle_faq_list">
+        <dl>
+          <dt>Q. 入会手続きに必要なものは何ですか？</dt>
+          <dd>A. ご本人様確認書類（運転免許証、健康保険証、マイナンバーカード等）および毎月の会費決済用のクレジットカードをご用意ください。</dd>
+        </dl>
+        <dl>
+          <dt>Q. 休会や退会の制度はありますか？</dt>
+          <dd>A. はい、ございます。ご希望の前月10日までに1階フロントにてお手続きいただくことで、休会やコース変更、退会が可能です。</dd>
+        </dl>
+        <dl>
+          <dt>Q. 事前の見学は予約が必要ですか？</dt>
+          <dd>A. 見学は営業時間中いつでも無料で承っております。ご予約なしでもスタッフが館内を丁寧にご案内いたしますのでお気軽にお立ち寄りください。</dd>
+        </dl>
+      </div>
+
+      <div class="plan_cta_actions">
+        <a href="https://entry.nas-club.co.jp/nyukai/?tenpo=140" target="_blank" rel="noopener" class="rp-reserve-btn">Web入会のお申し込みはこちら</a>
+        <a href="https://rsvprime.nas-club.co.jp/members/NR020?queryParam=%7B%22mode%22%3A2,%22tenpo%22%3A140%7D&digest=79fe70ca810b3d45ebcc2c8f008747675a0879f44958efb06393c6001b4660ae" target="_blank" rel="noopener" class="gentle_pill_btn">体験予約カレンダー（都度利用）</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /content -->
+
+<div id="footer-container"></div>
+
+</body>
+</html>
