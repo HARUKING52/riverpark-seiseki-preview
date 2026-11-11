@@ -2976,6 +2976,11 @@ body {
 	.facility .inner h2 {
 		margin-bottom: 30px;
 	}
+	.facility_image_area {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 22px 14px;
+		margin: 0 auto 36px;
+	}
 	.concept {
 		width: 88%;
 		padding: 45px 0;
