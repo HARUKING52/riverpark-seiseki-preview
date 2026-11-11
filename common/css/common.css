@@ -6,7 +6,9 @@
    License: none (public domain)
 */
 
-html { scroll-behavior: smooth;}
+@media (prefers-reduced-motion: no-preference) {
+	html { scroll-behavior: smooth; }
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -70,7 +72,7 @@ html {
 
 body {
 	font-family: "Noto Sans JP", "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-serif;
-	font-weight: nomal;
+	font-weight: normal;
 	color:#333333;
 	min-width:1200px;
 	overflow:hidden;
@@ -154,13 +156,13 @@ a {
 ---------------------------------------------------------- */
 
 
-header {
+#header-container header,
+body > header {
 	width:100%;
 	margin:0 auto;
 	background: #ffffffcc;
 	position: fixed;
 	z-index: 100;
-	
 }
 
 header .inner {
@@ -217,13 +219,13 @@ header .inner .head_contact a:hover {
 		vertical-align: bottom;
 	}
 
-	header {
+	#header-container header,
+	body > header {
 		width:100%;
 		margin:0 auto;
 		background: #ffffffcc;
 		position: fixed;
 		z-index: 100;
-
 	}
 
 	header .inner {
@@ -426,7 +428,7 @@ header .inner .head_contact a:hover {
   position: fixed; /* 画面に対して固定（親要素が指定されていても画面全体に広がります） */
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
   display: flex;

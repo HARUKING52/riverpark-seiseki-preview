@@ -175,3 +175,28 @@ test('subpage-gentle modal overflow guard and instructor filter tab keyboard acc
   assert.ok(instHtml.includes('aria-pressed="false"'), 'inactive instructor filter tabs must have aria-pressed="false"');
   assert.ok(instHtml.includes("e.key === 'Enter' || e.key === ' '"), 'instructor tabs must handle Enter and Space keydown');
 });
+
+test('Regression lock: modals never use <header> tag, common.css scopes fixed header, and Instagram embeds auto-resize without 540px clamp', () => {
+  const commonCss = fs.readFileSync(path.join(root, 'common/css/common.css'), 'utf8');
+  const gentleCss = fs.readFileSync(path.join(root, 'common/css/subpage-gentle.css'), 'utf8');
+  const commonJs = fs.readFileSync(path.join(root, 'common/js/common.js'), 'utf8');
+
+  // 1. Fixed header rule in common.css must not match bare <header> inside modals
+  assert.ok(!/^\s*header\s*\{/m.test(commonCss), 'common.css must not have bare header { position: fixed } selector');
+  assert.ok(commonCss.includes('prefers-reduced-motion: no-preference'), 'common.css must wrap smooth scroll in prefers-reduced-motion');
+
+  // 2. Modal detail CSS specificity & overscroll-behavior
+  assert.ok(gentleCss.includes('overscroll-behavior: contain'), '.rp-modal-detail must have overscroll-behavior: contain');
+  assert.ok(!gentleCss.includes('max-height: 540px'), '.rp-insta-iframe must not be clamped to max-height: 540px');
+  assert.ok(gentleCss.includes('minmax(326px'), '.rp-insta-embed-grid must guarantee >=326px column width for Instagram embeds');
+
+  // 3. Instagram postMessage MEASURE auto-resize listener in common.js
+  assert.ok(commonJs.includes('MEASURE') && commonJs.includes('message'), 'common.js must listen for Instagram MEASURE postMessage to prevent vertical clipping');
+
+  // 4. No modal across studio, outdoorfitness-program, bouldering, kids uses <header class="rp-modal-header">
+  for (const sub of ['studio/index.html', 'outdoorfitness-program/index.html', 'bouldering/index.html', 'kids/index.html']) {
+    const html = fs.readFileSync(path.join(root, sub), 'utf8');
+    assert.ok(!/<header[^>]*class="[^"]*rp-modal-header/.test(html), `${sub} must not use <header> for .rp-modal-header`);
+    assert.ok(html.includes('rp-modal-detail'), `${sub} must use .rp-modal-detail rich modals`);
+  }
+});

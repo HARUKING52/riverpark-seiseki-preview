@@ -75,3 +75,12 @@ test('Task 2: Top page includes Kids School in PROGRAM, official Instagram embed
   assert.ok(css.includes('.insta_embed_row') || css.includes('.rp-insta-embed-grid'), 'top.css must style Instagram embed row/grid');
 });
 
+test('Regression lock: #space-comfort does not collide with legacy .rental fixed height and broken font links are removed', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  assert.ok(!html.includes('id="space-comfort" class="rental'), '#space-comfort must not include legacy .rental class that clamps height to 335px');
+  assert.ok(html.includes('id="space-comfort" class="space_comfort"'), '#space-comfort must use class="space_comfort"');
+  assert.ok(!html.includes('href="https://googleapis.com"'), 'index.html must not contain broken href="https://googleapis.com"');
+  assert.ok(!html.includes('href="https://gstatic.com"'), 'index.html must not contain broken href="https://gstatic.com"');
+});
+
+

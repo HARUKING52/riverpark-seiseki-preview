@@ -44,6 +44,24 @@
             loadComponent('/include/footer.html', 'footer-container');
         });
 
+        // Instagram埋め込みiframeの高さをpostMessage(MEASURE)から自動同期し下部見切れを防止
+        window.addEventListener('message', (event) => {
+            if (!event.origin || !event.origin.includes('instagram.com')) return;
+            try {
+                const msg = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+                if (msg && msg.type === 'MEASURE' && msg.details && msg.details.height) {
+                    const h = Math.max(500, Number(msg.details.height) + 4);
+                    document.querySelectorAll('iframe.rp-insta-iframe, .insta_embed_col iframe').forEach((iframe) => {
+                        if (iframe.contentWindow === event.source) {
+                            iframe.style.height = h + 'px';
+                            iframe.style.minHeight = h + 'px';
+                            iframe.style.maxHeight = 'none';
+                        }
+                    });
+                }
+            } catch (e) {}
+        });
+
 
 (function($) {
     $(function () {

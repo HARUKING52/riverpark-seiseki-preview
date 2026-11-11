@@ -15,12 +15,12 @@ body {
 ---------------------------------------------------------- */
 
 .content {
-	padding: 200px 0 0;
+	padding: 130px 0 0;
 	color: #000000;
 }
 
 .content .title_area {
-	margin-bottom: 130px;
+	margin-bottom: 48px;
 }
 .content .title_area h1 {
 	font-size: 16px;
