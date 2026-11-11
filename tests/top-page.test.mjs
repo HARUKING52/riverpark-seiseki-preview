@@ -81,6 +81,10 @@ test('Regression lock: #space-comfort does not collide with legacy .rental fixed
   assert.ok(html.includes('id="space-comfort" class="space_comfort"'), '#space-comfort must use class="space_comfort"');
   assert.ok(!html.includes('href="https://googleapis.com"'), 'index.html must not contain broken href="https://googleapis.com"');
   assert.ok(!html.includes('href="https://gstatic.com"'), 'index.html must not contain broken href="https://gstatic.com"');
+
+  const css = fs.readFileSync(path.join(root, 'css/top.css'), 'utf8');
+  assert.ok(!css.includes('width: calc(320 / 750 * 100vw)'), 'facility_image div must not use legacy calc(320 / 750 * 100vw) that wraps into a single left-aligned column on mobile');
+  assert.ok(css.includes('grid-template-columns: repeat(2, 1fr)'), 'facility_image_area on mobile must use a 2-column grid');
 });
 
 

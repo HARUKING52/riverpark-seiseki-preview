@@ -677,12 +677,11 @@ body {
 
 
 	.facility_image_area {
-	  margin: 0 auto 60px;
-	  width: 88%;
-	  display: flex;
-	  flex-wrap: wrap;
-	  gap:0;
-		justify-content: space-between;
+	  margin: 0 auto 36px;
+	  width: 100%;
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  gap: 24px 14px;
 	}
 
 
@@ -693,14 +692,17 @@ body {
 	}
 
 	.facility_image_area .facility_image {
-		margin-bottom: 60px;
+		width: 100%;
+		margin-bottom: 0;
 	}
 
 	.facility_image_area .facility_image div {
-		width: calc(320 / 750 * 100vw);
-		height: calc(250 / 750 * 100vw);
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 3;
 		overflow: hidden;
-		margin-bottom: 15px;
+		margin-bottom: 8px;
+		border-radius: 4px;
 	}
 
 	.facility_image_area .facility_image img {
@@ -711,8 +713,10 @@ body {
 
 	.facility_image p {
 	  text-align: center;
-	  margin-top: 8px;
-	  font-size: 14px;
+	  margin-top: 4px;
+	  font-size: 11.5px;
+	  letter-spacing: -0.02em;
+	  line-height: 1.45;
 	}
 
 	/* スライダー専用モーダルの独自デザイン */
@@ -2928,6 +2932,26 @@ body {
 }
 
 @media screen and (max-width: 960px) {
+	.facility .inner {
+		width: 92%;
+	}
+	.facility_image_area {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px 16px;
+		margin: 0 auto 40px;
+	}
+	.facility_image_area .facility_image {
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.facility_image_area .facility_image div {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 3;
+		margin-bottom: 10px;
+	}
 	.service_list.five_col_circles {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
@@ -2943,6 +2967,15 @@ body {
 }
 
 @media screen and (max-width:768px){
+	.facility {
+		padding: 45px 0;
+	}
+	.facility .inner {
+		width: 90%;
+	}
+	.facility .inner h2 {
+		margin-bottom: 30px;
+	}
 	.concept {
 		width: 88%;
 		padding: 45px 0;
@@ -2987,6 +3020,11 @@ body {
 	}
 	.service_list.five_col_circles .service_item {
 		width: 100%;
+	}
+	.service_list.five_col_circles .service_item:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+		max-width: 50%;
+		margin-inline: auto;
 	}
 	.service_list.four_col_circles .service_item .service_img,
 	.service_list.five_col_circles .service_item .service_img {
