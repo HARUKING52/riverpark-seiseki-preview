@@ -125,4 +125,10 @@ test('concept/index.html and first-time/index.html use verified sunset bonfire, 
   const firstTimeHtml = readPage('first-time/index.html');
   assert.ok(firstTimeHtml.includes('rp_1f_reception_shop.jpg'), 'First-time page missing rp_1f_reception_shop.jpg');
   assert.ok(firstTimeHtml.includes('mv2_flow_yoga.jpg'), 'First-time page missing mv2_flow_yoga.jpg');
+
+  const programHtml = readPage('program/index.html');
+  const instructorHtml = readPage('instructor/index.html');
+  assert.ok(programHtml.includes('rp_riverside_yoga_1.jpg'), 'Program page hero should use rp_riverside_yoga_1.jpg');
+  assert.ok(!programHtml.includes('mv2_flow_yoga.jpg'), 'Program page should not duplicate instructor hero mv2_flow_yoga.jpg');
+  assert.ok(instructorHtml.includes('mv2_flow_yoga.jpg'), 'Instructor page hero should use mv2_flow_yoga.jpg');
 });
