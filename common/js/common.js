@@ -1,17 +1,35 @@
 
+        // サイトルート（ローカル環境では ""、GitHub Pages等のサブパス環境では "/repo-name"）を自動判定
+        function getSiteBase() {
+            const scripts = document.querySelectorAll('script[src*="common/js/common.js"]');
+            if (scripts.length > 0) {
+                try {
+                    const u = new URL(scripts[0].src, window.location.href);
+                    return u.pathname.replace(/\/common\/js\/common\.js.*$/, '');
+                } catch (e) {}
+            }
+            return '';
+        }
+
         // 共通ファイルを読み込んで指定の場所に埋め込む関数
         function loadComponent(fileUrl, targetId) {
             const target = document.getElementById(targetId);
             if (!target) return;
 
-            fetch(fileUrl)
+            const siteBase = getSiteBase();
+            const resolvedUrl = siteBase && fileUrl.startsWith('/') ? siteBase + fileUrl : fileUrl;
+
+            fetch(resolvedUrl)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error(`ファイルが見つかりません: ${fileUrl}`);
+                        throw new Error(`ファイルが見つかりません: ${resolvedUrl}`);
                     }
                     return response.text();
                 })
                 .then(data => {
+                    if (siteBase) {
+                        data = data.replace(/(href|src)="\/(?!\/)/g, `$1="${siteBase}/`);
+                    }
                     target.innerHTML = data;
                 })
                 .catch(error => {
