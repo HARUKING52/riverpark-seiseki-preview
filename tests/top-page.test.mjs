@@ -85,6 +85,10 @@ test('Regression lock: #space-comfort does not collide with legacy .rental fixed
   const css = fs.readFileSync(path.join(root, 'css/top.css'), 'utf8');
   assert.ok(!css.includes('width: calc(320 / 750 * 100vw)'), 'facility_image div must not use legacy calc(320 / 750 * 100vw) that wraps into a single left-aligned column on mobile');
   assert.ok(css.includes('grid-template-columns: repeat(2, 1fr)'), 'facility_image_area on mobile must use a 2-column grid');
+  assert.ok(css.includes('.space_comfort .sub_link a::after'), 'sub_link must use B案 outline pill button with ::after arrow');
+
+  const subCss = fs.readFileSync(path.join(root, 'common/css/subpage-gentle.css'), 'utf8');
+  assert.ok(subCss.includes('.effect_insta_note a::after'), 'subpage effect_insta_note link must use B案 outline pill button with ::after arrow');
 });
 
 

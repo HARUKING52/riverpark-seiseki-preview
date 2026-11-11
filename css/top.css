@@ -2659,13 +2659,53 @@ body {
 	margin-top: 20px;
 }
 
-.kids_sub_link a {
-	display: inline-block;
+.kids_sub_link a,
+.insta_follow_link a,
+.space_comfort .sub_link a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	background: #ffffff;
+	border: 1px solid #72bcd9;
+	border-radius: 999px;
+	padding: 11px 24px;
+	color: #3d8aa8;
 	font-size: 13.5px;
-	color: #72bcd9;
-	border-bottom: 1px solid #72bcd9;
-	padding-bottom: 3px;
 	font-weight: 500;
+	letter-spacing: 0.03em;
+	line-height: 1.5;
+	text-decoration: none;
+	box-sizing: border-box;
+	max-width: 100%;
+	transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.kids_sub_link a::after,
+.insta_follow_link a::after,
+.space_comfort .sub_link a::after {
+	content: "→";
+	font-size: 13px;
+	color: #72bcd9;
+	line-height: 1;
+	flex-shrink: 0;
+	transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.kids_sub_link a:hover,
+.insta_follow_link a:hover,
+.space_comfort .sub_link a:hover {
+	background: #f3f9fc;
+	color: #266f8b;
+	border-color: #5ab0d2;
+	opacity: 1;
+}
+
+.kids_sub_link a:hover::after,
+.insta_follow_link a:hover::after,
+.space_comfort .sub_link a:hover::after {
+	transform: translateX(3px);
+	color: #266f8b;
 }
 
 /* Section Level CTA Button */
@@ -2696,21 +2736,13 @@ body {
 .space_comfort .element_btns {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 14px;
 	flex-wrap: wrap;
 }
 
 .space_comfort .sub_link a {
-	font-size: 13.5px;
-	color: #72bcd9;
-	border-bottom: 1px solid #72bcd9;
-	padding-bottom: 2px;
-	font-weight: 500;
-	transition: opacity 0.2s ease;
-}
-
-.space_comfort .sub_link a:hover {
-	opacity: 0.75;
+	padding: 9px 20px;
+	font-size: 13px;
 }
 
 /* 5-Column Circles Layout (PROGRAM) */
@@ -2922,13 +2954,7 @@ body {
 .insta_follow_link {
 	text-align: center;
 	font-size: 13.5px;
-}
-
-.insta_follow_link a {
-	color: #72bcd9;
-	font-weight: 500;
-	border-bottom: 1px solid #72bcd9;
-	padding-bottom: 3px;
+	margin-top: 8px;
 }
 
 @media screen and (max-width: 960px) {
@@ -3044,5 +3070,11 @@ body {
 	.insta_photo_strip {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 10px;
+	}
+	.kids_sub_link a,
+	.insta_follow_link a {
+		padding: 10px 18px;
+		font-size: 12.5px;
+		line-height: 1.45;
 	}
 }
